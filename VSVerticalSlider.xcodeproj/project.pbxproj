@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0B8BB9CB1F8D833B0002732F /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D11F8D84670002732F /* VerticalSlider.swift */; };
+		0B8BB9D51F8D85120002732F /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D41F8D85120002732F /* CALayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B8BB9C61F8D833B0002732F /* VSVerticalSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VSVerticalSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSVerticalSlider.h; sourceTree = "<group>"; };
 		0B8BB9CA1F8D833B0002732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B8BB9D11F8D84670002732F /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		0B8BB9D41F8D85120002732F /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +52,26 @@
 			children = (
 				0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */,
 				0B8BB9CA1F8D833B0002732F /* Info.plist */,
+				0B8BB9D31F8D846D0002732F /* Control */,
+				0B8BB9D61F8D851C0002732F /* Layer */,
 			);
 			path = VSVerticalSlider;
+			sourceTree = "<group>";
+		};
+		0B8BB9D31F8D846D0002732F /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BB9D11F8D84670002732F /* VerticalSlider.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		0B8BB9D61F8D851C0002732F /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0B8BB9D41F8D85120002732F /* CALayer.swift */,
+			);
+			path = Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +117,7 @@
 				TargetAttributes = {
 					0B8BB9C51F8D833B0002732F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */,
+				0B8BB9D51F8D85120002732F /* CALayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +278,7 @@
 		0B8BB9CF1F8D833B0002732F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = VincentSmithers.VSVerticalSlider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +301,7 @@
 		0B8BB9D01F8D833B0002732F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
