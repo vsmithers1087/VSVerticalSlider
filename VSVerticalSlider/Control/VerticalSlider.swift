@@ -16,7 +16,12 @@ public enum SliderSize {
 
 public class VerticalSlider: UIControl {
     
+    var gradientFill = GradientFill()
+    var positiveImageView: PoleImageView?
+    var negativeImageView: PoleImageView?
+    
     var frameWidthConstant: CGFloat = 40.0
+    var currentVal: Int = 50
     var frameHeightConstant: CGFloat!
 
     private var lowScrollableRange: CGFloat!
@@ -26,8 +31,6 @@ public class VerticalSlider: UIControl {
     private var negImage: UIImage!
     private var posImage: UIImage!
     
-    var gradientFill = GradientFill()
-    var currentVal: Int = 50
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,7 +40,7 @@ public class VerticalSlider: UIControl {
         super.init(frame: frame)
     }
     
-    public convenience init(size: SliderSize){
+    public convenience init(size: SliderSize, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
         self.init(frame: CGRect.zero)
         switch size {
         case .Small:
@@ -53,6 +56,8 @@ public class VerticalSlider: UIControl {
         highScrollableRange = frameHeightConstant - frameWidthConstant
         scrollUnit = (highScrollableRange - lowScrollableRange) / 100
         offset = (frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
+        setupPoleImageView(poleImage: positiveImage, isPositive: true)
+        setupPoleImageView(poleImage: negativeImage, isPositive: false)
         setup()
     }
     
@@ -61,6 +66,16 @@ public class VerticalSlider: UIControl {
         setFrameContraints()
         setupPanGesture()
         setupTapGesture()
+    }
+    
+    private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) {
+        let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frame.height - frame.width)
+        if let image = poleImage {
+            positiveImageView = PoleImageView(image: image)
+            positiveImageView?.frame = CGRect(x: origin.x, y: origin.y, width: frameWidthConstant, height: frameWidthConstant)
+            print(positiveImageView?.frame.width)
+            self.insertSubview(positiveImageView!, at: 0)
+        }
     }
     
     private func setupPanGesture(){
