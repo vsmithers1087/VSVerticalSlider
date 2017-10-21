@@ -37,7 +37,7 @@ public class VerticalSlider: UIControl {
         super.init(frame: frame)
     }
     
-    public convenience init(size: SliderSize, origin: CGPoint){
+    public convenience init(size: SliderSize){
         self.init(frame: CGRect.zero)
         switch size {
         case .Small:
@@ -53,20 +53,18 @@ public class VerticalSlider: UIControl {
         highScrollableRange = frameHeightConstant - frameWidthConstant
         scrollUnit = (highScrollableRange - lowScrollableRange) / 100
         offset = (frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
-        customInit()
+        setup()
     }
     
-    private func customInit(){
+    private func setup(){
         setFrame()
         setFrameContraints()
         setupPanGesture()
         setupTapGesture()
-                //setPosImageFrameContraints()
-        //setNegImageFrameContraints()
     }
     
     private func setupPanGesture(){
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(VerticalSlider.isSliding(sender:)))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(VerticalSlider.slid(sender:)))
         addGestureRecognizer(gesture)
     }
     
@@ -84,7 +82,7 @@ public class VerticalSlider: UIControl {
         }
     }
 
-    @objc public func isSliding(sender: UIPanGestureRecognizer) {
+    @objc public func slid(sender: UIPanGestureRecognizer) {
         updateValue(forGesture: sender)
     }
     
@@ -98,7 +96,8 @@ extension VerticalSlider {
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = 2.0
         let frame = CGRect(x: 0, y: 0, width: frameWidthConstant, height: frameHeightConstant)
         gradientFill.initialSetup(withFrame: frame)
         layer.addSublayer(gradientFill)
@@ -112,34 +111,4 @@ extension VerticalSlider {
         width.isActive = true
         height.isActive = true
     }
-    
-//    private func setPosImageFrameContraints(){
-//        let trailing = NSLayoutConstraint(item: plusImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0)
-//        let leading = NSLayoutConstraint(item: plusImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0)
-//        let top = NSLayoutConstraint(item: plusImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0)
-//        let height = NSLayoutConstraint(item: plusImageView, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameWidthConstant)
-//
-//        trailing.isActive = true
-//        leading.isActive = true
-//        top.isActive = true
-//        height.isActive = true
-//
-//        addSubview(plusImageView)
-//        layoutIfNeeded()
-//    }
-//
-//    private func setNegImageFrameContraints(){
-//        let trailing = NSLayoutConstraint(item: negativeImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0)
-//        let leading = NSLayoutConstraint(item: negativeImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0)
-//        let top = NSLayoutConstraint(item: negativeImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0)
-//        let height = NSLayoutConstraint(item: negativeImageView, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameWidthConstant)
-//
-//        trailing.isActive = true
-//        leading.isActive = true
-//        top.isActive = true
-//        height.isActive = true
-//
-//        addSubview(negativeImageView)
-//        layoutIfNeeded()
-//    }
 }
