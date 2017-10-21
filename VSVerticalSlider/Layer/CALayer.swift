@@ -12,16 +12,12 @@ class GradientFill: CALayer {
     
     var positiveGradient = CAGradientLayer()
     var negativeGradient = CAGradientLayer()
-    
     var positiveStartPoint = CGPoint()
     var negativeStartPoint = CGPoint()
-    
     var positiveEndPoint = CGPoint()
     var negativeEndPoint = CGPoint()
-    
     var postiveColors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor,  UIColor.white.cgColor]
     var negativeColors = [UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor]
-    
     var currentPoint: CGFloat!
     
     override init() {

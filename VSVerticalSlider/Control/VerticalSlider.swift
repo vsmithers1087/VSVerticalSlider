@@ -27,6 +27,7 @@ public class VerticalSlider: UIControl {
     private var highScrollableRange: CGFloat!
     private var offset: CGFloat!
     private var scrollUnit : CGFloat!
+    private let placeholderHeight: CGFloat = 20.0
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -46,18 +47,20 @@ public class VerticalSlider: UIControl {
         case .Large:
             frameHeightConstant = 500.0 + (frameWidthConstant * 2)
         }
-        
-        let distanceBetweenPlaceholderAndPoint: CGFloat = 20.0
-        lowScrollableRange = frameWidthConstant + distanceBetweenPlaceholderAndPoint - frameHeightConstant / 111
-        highScrollableRange = frameHeightConstant - frameWidthConstant
-        scrollUnit = (highScrollableRange - lowScrollableRange) / 100
-        offset = (frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
         setup()
         setupPoleImageView(poleImage: positiveImage, isPositive: true)
         setupPoleImageView(poleImage: negativeImage, isPositive: false)
     }
     
+    private func setSliderContants() {
+        lowScrollableRange = frameWidthConstant + placeholderHeight
+        highScrollableRange = frameHeightConstant
+        scrollUnit = (highScrollableRange - lowScrollableRange) / 100
+        offset = (frameWidthConstant + placeholderHeight) / scrollUnit
+    }
+    
     private func setup(){
+        setSliderContants()
         setFrame()
         setFrameContraints()
         setupPanGesture()
@@ -69,7 +72,6 @@ public class VerticalSlider: UIControl {
         if let image = poleImage {
             let poleImageView = PoleImageView(image: image)
             poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidthConstant, height: frameWidthConstant)
-            print(poleImageView.frame)
             addSubview(poleImageView)
         }
     }
@@ -86,10 +88,10 @@ public class VerticalSlider: UIControl {
     
     public func updateValue(forGesture gesture: UIGestureRecognizer) {
         let location = gesture.location(in: self).y
-        print(location)
         if location <= highScrollableRange && location >= lowScrollableRange{
             gradientFill.reDrawGradients(forCurrentPoint: location)
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - offset) - 100))
+            print("current value: \(currentVal)")
             value(currentVal)
         }
     }
@@ -108,9 +110,9 @@ extension VerticalSlider {
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 2.0
-        let frame = CGRect(x: 0, y: frameWidthConstant, width: frameWidthConstant, height: frameHeightConstant - frameWidthConstant)
+        layer.borderColor = UIColor.black.cgColor
+        let frame = CGRect(x: 0, y: 0, width: frameWidthConstant, height: frameHeightConstant + placeholderHeight)
         gradientFill.initialSetup(withFrame: frame)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
