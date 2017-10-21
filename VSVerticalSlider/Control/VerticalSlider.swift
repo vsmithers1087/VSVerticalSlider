@@ -35,7 +35,7 @@ public class VerticalSlider: UIControl {
         imageV.backgroundColor = UIColor.black
         imageV.layer.borderWidth = 2.0
         imageV.layer.borderColor = UIColor.orange.cgColor
-        imageV.image = posImage
+        //imageV.image = posImage
         imageV.contentMode = .scaleAspectFit
         return imageV
     }
@@ -46,7 +46,7 @@ public class VerticalSlider: UIControl {
         imageV.backgroundColor = UIColor.black
         imageV.layer.borderWidth = 2.0
         imageV.layer.borderColor = UIColor.orange.cgColor
-        imageV.image = negImage
+        //imageV.image = negImage
         imageV.contentMode = .scaleAspectFit
         return imageV
     }
@@ -61,30 +61,29 @@ public class VerticalSlider: UIControl {
     
     public convenience init(size: SliderSize, origin: CGPoint){
         self.init(frame: CGRect.zero)
-        
         switch size {
         case .Small:
-            self.frameHeightConstant = 300.0 + (frameWidthConstant * 2)
+            frameHeightConstant = 300.0 + (frameWidthConstant * 2)
         case .Medium:
-            self.frameHeightConstant = 400.0 + (frameWidthConstant * 2)
+            frameHeightConstant = 400.0 + (frameWidthConstant * 2)
         case .Large:
-            self.frameHeightConstant = 500.0 + (frameWidthConstant * 2)
+            frameHeightConstant = 500.0 + (frameWidthConstant * 2)
         }
         
         let distanceBetweenPlaceholderAndPoint: CGFloat = 20.0
-        lowScrollableRange = frameWidthConstant + distanceBetweenPlaceholderAndPoint - self.frameHeightConstant / 111
+        lowScrollableRange = frameWidthConstant + distanceBetweenPlaceholderAndPoint - frameHeightConstant / 111
         highScrollableRange = frameHeightConstant - frameWidthConstant
         scrollUnit = (highScrollableRange - lowScrollableRange) / 100
-        offset = (self.frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
+        offset = (frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
         customInit()
     }
     
     private func customInit(){
-        self.setImages()
-        self.setFrame()
-        self.setFrameContraints()
-        self.setPosImageFrameContraints()
-        self.setNegImageFrameContraints()
+        //self.setImages()
+        setFrame()
+        setFrameContraints()
+        //setPosImageFrameContraints()
+        //setNegImageFrameContraints()
     }
     
     private func setImages(){
@@ -111,13 +110,14 @@ public class VerticalSlider: UIControl {
 }
 
 extension VerticalSlider {
+    
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.white.cgColor
-        let frame = CGRect(x: 0, y: 0, width: self.frameWidthConstant, height: self.frameHeightConstant)
+        let frame = CGRect(x: 0, y: 0, width: frameWidthConstant, height: frameHeightConstant)
         gradientFill.initialSetup(withFrame: frame)
-        layer.addSublayer(self.gradientFill)
+        layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()
     }
