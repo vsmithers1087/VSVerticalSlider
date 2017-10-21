@@ -17,8 +17,7 @@ public enum SliderSize {
 public class VerticalSlider: UIControl {
     
     var gradientFill = GradientFill()
-    var positiveImageView: PoleImageView?
-    var negativeImageView: PoleImageView?
+    public var value: (Int) -> () = { return $0 }
     
     var frameWidthConstant: CGFloat = 40.0
     var currentVal: Int = 50
@@ -28,9 +27,6 @@ public class VerticalSlider: UIControl {
     private var highScrollableRange: CGFloat!
     private var offset: CGFloat!
     private var scrollUnit : CGFloat!
-    private var negImage: UIImage!
-    private var posImage: UIImage!
-    
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -56,9 +52,9 @@ public class VerticalSlider: UIControl {
         highScrollableRange = frameHeightConstant - frameWidthConstant
         scrollUnit = (highScrollableRange - lowScrollableRange) / 100
         offset = (frameWidthConstant + distanceBetweenPlaceholderAndPoint) / scrollUnit
+        setup()
         setupPoleImageView(poleImage: positiveImage, isPositive: true)
         setupPoleImageView(poleImage: negativeImage, isPositive: false)
-        setup()
     }
     
     private func setup(){
@@ -69,12 +65,12 @@ public class VerticalSlider: UIControl {
     }
     
     private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) {
-        let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frame.height - frame.width)
+        let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frameHeightConstant)
         if let image = poleImage {
-            positiveImageView = PoleImageView(image: image)
-            positiveImageView?.frame = CGRect(x: origin.x, y: origin.y, width: frameWidthConstant, height: frameWidthConstant)
-            print(positiveImageView?.frame.width)
-            self.insertSubview(positiveImageView!, at: 0)
+            let poleImageView = PoleImageView(image: image)
+            poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidthConstant, height: frameWidthConstant)
+            print(poleImageView.frame)
+            addSubview(poleImageView)
         }
     }
     
@@ -89,11 +85,12 @@ public class VerticalSlider: UIControl {
     }
     
     public func updateValue(forGesture gesture: UIGestureRecognizer) {
-        print("update value: \(frame.origin.y)")
         let location = gesture.location(in: self).y
+        print(location)
         if location <= highScrollableRange && location >= lowScrollableRange{
             gradientFill.reDrawGradients(forCurrentPoint: location)
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - offset) - 100))
+            value(currentVal)
         }
     }
 
@@ -113,7 +110,7 @@ extension VerticalSlider {
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 2.0
-        let frame = CGRect(x: 0, y: 0, width: frameWidthConstant, height: frameHeightConstant)
+        let frame = CGRect(x: 0, y: frameWidthConstant, width: frameWidthConstant, height: frameHeightConstant - frameWidthConstant)
         gradientFill.initialSetup(withFrame: frame)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()

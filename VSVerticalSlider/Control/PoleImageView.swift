@@ -12,6 +12,7 @@ public class PoleImageView: UIImageView {
     
     public override init(image: UIImage?) {
         super.init(image: image)
+        layer.cornerRadius = frame.width / 2
     }
     
     public override init(frame: CGRect) {
