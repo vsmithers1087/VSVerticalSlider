@@ -18,9 +18,9 @@ class GradientFill: CALayer {
     
     var positiveEndPoint = CGPoint()
     var negativeEndPoint = CGPoint()
-//    
-//    var postiveColors = [UIColor.blueColor().CGColor, UIColor.cyanColor().CGColor, UIColor.whiteColor().CGColor, UIColor.clearColor().CGColor,  UIColor.whiteColor().CGColor]
-//    var negativeColors = [UIColor.orangeColor().CGColor, UIColor.whiteColor().CGColor, UIColor.clearColor().CGColor,UIColor.whiteColor().CGColor, UIColor.orangeColor().CGColor]
+    
+    var postiveColors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor,  UIColor.white.cgColor]
+    var negativeColors = [UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor]
     
     var currentPoint: CGFloat!
     
@@ -33,55 +33,40 @@ class GradientFill: CALayer {
     }
     
     func setUpBackgroundGradient()->CAGradientLayer {
-        
         let backgroundGradient = CAGradientLayer()
-        backgroundGradient.frame = self.frame
-        //backgroundGradient.startPoint = CGPointMake(0.9, 0.1)
-        //backgroundGradient.endPoint = CGPointMake(0.9, 0.9)
-//        backgroundGradient.colors = [UIColor.purpleColor().CGColor, UIColor.blueColor().CGColor, UIColor.cyanColor().CGColor, UIColor.greenColor().CGColor, UIColor.redColor().CGColor, UIColor.orangeColor().CGColor, UIColor.yellowColor().CGColor, UIColor.purpleColor().CGColor, UIColor.blueColor().CGColor, UIColor.cyanColor().CGColor, UIColor.greenColor().CGColor, UIColor.redColor().CGColor, UIColor.orangeColor().CGColor, UIColor.yellowColor().CGColor, UIColor.purpleColor().CGColor, UIColor.blueColor().CGColor, UIColor.cyanColor().CGColor, UIColor.greenColor().CGColor, UIColor.redColor().CGColor, UIColor.orangeColor().CGColor, UIColor.yellowColor().CGColor, UIColor.purpleColor().CGColor, UIColor.blueColor().CGColor, UIColor.cyanColor().CGColor, UIColor.greenColor().CGColor, UIColor.redColor().CGColor, UIColor.orangeColor().CGColor, UIColor.yellowColor().CGColor]
-        
-        
+        backgroundGradient.frame = frame
+        backgroundGradient.startPoint = CGPoint(x: 0.9, y: 0.1)
+        backgroundGradient.endPoint = CGPoint(x: 0.9, y: 0.9)
+        backgroundGradient.colors = [UIColor.purple.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor, UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.yellow.cgColor, UIColor.purple.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor, UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.yellow.cgColor, UIColor.purple.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor, UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.yellow.cgColor]
         return backgroundGradient
     }
     
     func initialSetup(withFrame: CGRect){
-        
-        self.frame = withFrame
-        self.backgroundColor = UIColor.white.cgColor
-        
-        self.currentPoint = self.frame.height / 2
-        //self.reDrawGradients(self.currentPoint)
-        
-        self.addSublayer(positiveGradient)
-        self.addSublayer(negativeGradient)
-        self.insertSublayer(self.setUpBackgroundGradient(), below: positiveGradient)
+        frame = withFrame
+        backgroundColor = UIColor.white.cgColor
+        currentPoint = frame.height / 2
+        reDrawGradients(forCurrentPoint: currentPoint)
+        addSublayer(positiveGradient)
+        addSublayer(negativeGradient)
+        insertSublayer(setUpBackgroundGradient(), below: positiveGradient)
     }
     
-    
     func reDrawGradients(forCurrentPoint: CGFloat){
-        
-        self.currentPoint = forCurrentPoint
-        
-        //positiveGradient.frame = CGRect(0, 0, self.frame.width, forCurrentPoint - 20)
+        currentPoint = forCurrentPoint
+        positiveGradient.frame = CGRect(x: 0, y: 0, width: frame.width, height: forCurrentPoint - 20)
         positiveGradient.borderWidth = 1.0
-        
         positiveStartPoint = CGPoint(x: 0.1, y:0.3)
         positiveEndPoint = CGPoint(x:0.9, y:0.9)
         positiveGradient.startPoint = positiveStartPoint
         positiveGradient.endPoint = positiveEndPoint
-        
-        //positiveGradient.colors = postiveColors
-        
-        //negativeGradient.frame = CGRect(0, forCurrentPoint, self.frame.width, (self.frame.height - forCurrentPoint) - 20)
+        positiveGradient.colors = postiveColors
+        negativeGradient.frame = CGRect(x: 0, y: forCurrentPoint, width: frame.width, height: (frame.height - forCurrentPoint) - 20)
         negativeGradient.borderWidth = 2.0
-        
-        //negativeStartPoint = CGPoint(0.1, 0.3)
-       // negativeEndPoint = CGPoint(0.9, 0.9)
-        
+        negativeStartPoint = CGPoint(x: 0.1, y: 0.3)
+        negativeEndPoint = CGPoint(x: 0.9, y: 0.9)
         negativeGradient.startPoint = positiveStartPoint
         negativeGradient.endPoint = negativeEndPoint
-        
-        //negativeGradient.colors = negativeColors
+        negativeGradient.colors = negativeColors
     }
 }
 
