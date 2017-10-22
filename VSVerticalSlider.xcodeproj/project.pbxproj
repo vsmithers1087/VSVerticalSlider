@@ -11,7 +11,7 @@
 		0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */; };
 		0B8BB9CB1F8D833B0002732F /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D11F8D84670002732F /* VerticalSlider.swift */; };
-		0B8BB9D51F8D85120002732F /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D41F8D85120002732F /* CALayer.swift */; };
+		0B8BB9D51F8D85120002732F /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D41F8D85120002732F /* GradientFill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSVerticalSlider.h; sourceTree = "<group>"; };
 		0B8BB9CA1F8D833B0002732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8BB9D11F8D84670002732F /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
-		0B8BB9D41F8D85120002732F /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		0B8BB9D41F8D85120002732F /* GradientFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0B8BB9D61F8D851C0002732F /* Layer */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BB9D41F8D85120002732F /* CALayer.swift */,
+				0B8BB9D41F8D85120002732F /* GradientFill.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 				0B6DA3B01F9B7DB200060302 /* SliderSendable.swift in Sources */,
 				0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */,
 				0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */,
-				0B8BB9D51F8D85120002732F /* CALayer.swift in Sources */,
+				0B8BB9D51F8D85120002732F /* GradientFill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

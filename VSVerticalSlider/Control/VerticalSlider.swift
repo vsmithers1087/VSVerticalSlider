@@ -88,7 +88,7 @@ public class VerticalSlider: UIControl {
     public func updateValue(forGesture gesture: UIGestureRecognizer) {
         let location = gesture.location(in: self).y
         if location <= maxScrollPoint && location >= minScrollPoint{
-            gradientFill.reDrawGradients(forCurrentPoint: location)
+            gradientFill.drawGradients(forCurrentPoint: location)
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - offset) - 100))
             delegate?.valueDidChange(value: currentVal)
             print("current value: \(currentVal)")
@@ -112,7 +112,7 @@ extension VerticalSlider {
         layer.cornerRadius = 2.0
         layer.borderColor = UIColor.black.cgColor
         let frame = CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight + placeholderHeight)
-        gradientFill.initialSetup(withFrame: frame)
+        gradientFill.setup(withFrame: frame)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()
