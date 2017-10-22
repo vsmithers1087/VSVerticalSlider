@@ -108,7 +108,7 @@ extension VerticalSlider {
     
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
-        layer.borderWidth = 1.0
+        layer.borderWidth = 5.0
         layer.cornerRadius = 2.0
         layer.borderColor = UIColor.black.cgColor
         let frame = CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight + placeholderHeight)
