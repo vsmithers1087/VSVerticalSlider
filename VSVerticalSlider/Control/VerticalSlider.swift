@@ -16,6 +16,7 @@ public enum SliderSize {
 
 public class VerticalSlider: UIControl {
     
+    public weak var delegate: SliderSendable?
     private let gradientFill = GradientFill()
     private let frameWidth: CGFloat = 40.0
     private let placeholderHeight: CGFloat = 20.0
@@ -89,6 +90,7 @@ public class VerticalSlider: UIControl {
         if location <= maxScrollPoint && location >= minScrollPoint{
             gradientFill.reDrawGradients(forCurrentPoint: location)
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - offset) - 100))
+            delegate?.valueDidChange(value: currentVal)
             print("current value: \(currentVal)")
         }
     }
