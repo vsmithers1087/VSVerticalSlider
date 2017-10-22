@@ -112,7 +112,7 @@ extension VerticalSlider {
         layer.cornerRadius = 2.0
         layer.borderColor = UIColor.black.cgColor
         let frame = CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight + placeholderHeight)
-        gradientFill.setup(withFrame: frame)
+        gradientFill.setup(withFrame: frame, primaryColor: UIColor.red)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()

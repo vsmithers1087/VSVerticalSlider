@@ -8,10 +8,6 @@
 
 import UIKit
 
-//1 init with color
-//2 sample project
-//3 readme
-
 class GradientFill: CALayer {
 
     var positiveGradient = CAGradientLayer()
@@ -20,8 +16,8 @@ class GradientFill: CALayer {
     var negativeStartPoint = CGPoint()
     var positiveEndPoint = CGPoint()
     var negativeEndPoint = CGPoint()
-    var postiveColors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.blue.cgColor, UIColor.cyan.cgColor]
-    var negativeColors = [UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor, UIColor.white.cgColor, UIColor.orange.cgColor, UIColor.white.cgColor]
+    var postiveColors = [CGColor]()
+    var negativeColors = [CGColor]()
     var currentPoint: CGFloat!
     
     override init() {
@@ -32,15 +28,30 @@ class GradientFill: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(withFrame frame: CGRect) {
+    func setup(withFrame frame: CGRect, primaryColor: UIColor) {
         self.frame = frame
+        setColors(color: primaryColor)
         currentPoint = frame.height / 2
         negativeGradient.colors = negativeColors
+        print(negativeGradient.colors?.count)
         positiveGradient.colors = postiveColors
         drawGradients(forCurrentPoint: currentPoint)
         setBackgroundGradient()
         addSublayer(positiveGradient)
         addSublayer(negativeGradient)
+    }
+    
+    func setColors(color: UIColor) {
+        guard let compliment = UIColor.getCompliment(color: color) else { return }
+        postiveColors = (0...6).map({ (idx) -> CGColor in
+            let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : color.cgColor
+            return selectedColor
+        })
+        
+        negativeColors = (0...6).map({ (idx) -> CGColor in
+            let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : compliment.cgColor
+            return selectedColor
+        })
     }
     
     func setBackgroundGradient() {
