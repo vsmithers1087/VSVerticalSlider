@@ -42,20 +42,21 @@ class GradientFill: CALayer {
     
     func setColors(color: UIColor) {
         guard let compliment = UIColor.getCompliment(color: color) else { return }
-        postiveColors = (0...13).map({ (idx) -> CGColor in
+        postiveColors = getColorArray(color: color, count: 13)
+        negativeColors = getColorArray(color: compliment, count: 13)
+    }
+    
+    func getColorArray(color: UIColor, count: Int) -> [CGColor] {
+        let colors = (0...count).map { (idx) -> CGColor in
             let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : color.cgColor
             return selectedColor
-        })
-        
-        negativeColors = (0...13).map({ (idx) -> CGColor in
-            let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : compliment.cgColor
-            return selectedColor
-        })
+        }
+        return colors
     }
     
     func setBackgroundGradient() {
         let backgroundGrandient = CAGradientLayer()
-        backgroundGrandient.colors = [UIColor.yellow.cgColor, UIColor.purple.cgColor, UIColor.yellow.cgColor, UIColor.purple.cgColor, UIColor.yellow.cgColor, UIColor.purple.cgColor]
+        backgroundGrandient.colors = postiveColors
         backgroundGrandient.frame = frame
         addSublayer(backgroundGrandient)
     }
