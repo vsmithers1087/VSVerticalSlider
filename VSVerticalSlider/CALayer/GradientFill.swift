@@ -33,7 +33,6 @@ class GradientFill: CALayer {
         setColors(color: primaryColor)
         currentPoint = frame.height / 2
         negativeGradient.colors = negativeColors
-        print(negativeGradient.colors?.count)
         positiveGradient.colors = postiveColors
         drawGradients(forCurrentPoint: currentPoint)
         setBackgroundGradient()
@@ -43,12 +42,12 @@ class GradientFill: CALayer {
     
     func setColors(color: UIColor) {
         guard let compliment = UIColor.getCompliment(color: color) else { return }
-        postiveColors = (0...6).map({ (idx) -> CGColor in
+        postiveColors = (0...13).map({ (idx) -> CGColor in
             let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : color.cgColor
             return selectedColor
         })
         
-        negativeColors = (0...6).map({ (idx) -> CGColor in
+        negativeColors = (0...13).map({ (idx) -> CGColor in
             let selectedColor = idx % 2 == 0 ? UIColor.white.cgColor : compliment.cgColor
             return selectedColor
         })

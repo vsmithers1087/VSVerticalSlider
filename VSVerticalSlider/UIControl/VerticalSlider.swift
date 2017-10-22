@@ -17,6 +17,7 @@ public enum SliderSize {
 public class VerticalSlider: UIControl {
     
     public weak var delegate: SliderSendable?
+    public var primaryColor = UIColor.clear
     private let gradientFill = GradientFill()
     private let frameWidth: CGFloat = 40.0
     private let placeholderHeight: CGFloat = 20.0
@@ -36,8 +37,9 @@ public class VerticalSlider: UIControl {
         super.init(frame: frame)
     }
     
-    public convenience init(size: SliderSize, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
+    public convenience init(size: SliderSize, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
         self.init(frame: CGRect.zero)
+        self.primaryColor = primaryColor
         switch size {
         case .Small:
             frameHeight = 300.0 + (frameWidth * 2)
@@ -71,6 +73,7 @@ public class VerticalSlider: UIControl {
         if let image = poleImage {
             let poleImageView = PoleImageView(image: image)
             poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
+            poleImageView.layer.borderWidth = 1.0
             addSubview(poleImageView)
         }
     }
@@ -108,11 +111,11 @@ extension VerticalSlider {
     
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
-        layer.borderWidth = 5.0
-        layer.cornerRadius = 2.0
+        layer.borderWidth = 1.0
+        layer.cornerRadius = 7.0
         layer.borderColor = UIColor.black.cgColor
         let frame = CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight + placeholderHeight)
-        gradientFill.setup(withFrame: frame, primaryColor: UIColor.red)
+        gradientFill.setup(withFrame: frame, primaryColor: primaryColor)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()
