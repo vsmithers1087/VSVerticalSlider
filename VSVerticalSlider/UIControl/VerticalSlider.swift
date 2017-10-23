@@ -8,12 +8,6 @@
 
 import UIKit
 
-public enum SliderSize {
-    case Small
-    case Medium
-    case Large
-}
-
 public class VerticalSlider: UIControl {
     
     public weak var delegate: SliderSendable?
@@ -37,17 +31,10 @@ public class VerticalSlider: UIControl {
         super.init(frame: frame)
     }
     
-    public convenience init(size: SliderSize, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
+    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
         self.init(frame: CGRect.zero)
         self.primaryColor = primaryColor
-        switch size {
-        case .Small:
-            frameHeight = 300.0 + (frameWidth * 2)
-        case .Medium:
-            frameHeight = 400.0 + (frameWidth * 2)
-        case .Large:
-            frameHeight = 500.0 + (frameWidth * 2)
-        }
+        frameHeight  = height > 200 ? height : 200
         setup()
         setupPoleImageView(poleImage: positiveImage, isPositive: true)
         setupPoleImageView(poleImage: negativeImage, isPositive: false)
@@ -123,7 +110,7 @@ extension VerticalSlider {
     
     private func setFrameContraints(){
         let width = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameWidth)
-        let height = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameHeight!)
+        let height = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameHeight)
         width.isActive = true
         height.isActive = true
     }
