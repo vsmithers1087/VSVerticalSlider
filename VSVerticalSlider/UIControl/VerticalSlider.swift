@@ -35,6 +35,7 @@ public class VerticalSlider: UIControl {
         self.init(frame: CGRect.zero)
         self.primaryColor = primaryColor
         frameHeight  = height > 200 ? height : 200
+        frame.origin = CGPoint(x: 20, y: 20)
         setup()
         setupPoleImageView(poleImage: positiveImage, isPositive: true)
         setupPoleImageView(poleImage: negativeImage, isPositive: false)
