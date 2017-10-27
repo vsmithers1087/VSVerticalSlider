@@ -54,6 +54,7 @@ public class VerticalSlider: UIControl {
         setFrameContraints()
         setupPanGesture()
         setupTapGesture()
+        transform = CGAffineTransform(translationX: 20, y: 20)
     }
     
     private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) {
@@ -106,9 +107,7 @@ extension VerticalSlider {
     
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.black.cgColor
-        let frame = CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight + placeholderHeight)
+        let frame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: frameWidth, height: frameHeight + placeholderHeight)
         gradientFill.setup(withFrame: frame, primaryColor: primaryColor)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
@@ -118,7 +117,6 @@ extension VerticalSlider {
     private func setFrameContraints(){
         let width = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameWidth)
         let height = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1.0, constant: frameHeight)
-        
         width.isActive = true
         height.isActive = true
     }

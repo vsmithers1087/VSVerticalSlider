@@ -11,8 +11,8 @@ let containerView = UIView(frame: CGRect(x: 20, y: 20, width: 300, height: 500))
 containerView.backgroundColor = UIColor.white
 let slider = VerticalSlider(height: 400, primaryColor: newColor, positiveImage: x, negativeImage: x)
 slider.backgroundColor = UIColor.white
+slider.frame = CGRect(x: 100, y: 100, width: 40, height: 300)
 containerView.addSubview(slider)
-slider.setValue(50)
 
 PlaygroundPage.current.liveView = containerView
 
