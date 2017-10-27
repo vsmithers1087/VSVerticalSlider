@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B6DA3B01F9B7DB200060302 /* SliderSendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DA3AF1F9B7DB200060302 /* SliderSendable.swift */; };
+		0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */; };
 		0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */; };
 		0B8BB9CB1F8D833B0002732F /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D11F8D84670002732F /* VerticalSlider.swift */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B6DA3AF1F9B7DB200060302 /* SliderSendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSendable.swift; sourceTree = "<group>"; };
+		0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSVerticalSliderDelegate.swift; sourceTree = "<group>"; };
 		0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoleImageView.swift; sourceTree = "<group>"; };
 		0B8BB9C61F8D833B0002732F /* VSVerticalSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VSVerticalSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSVerticalSlider.h; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		0B6DA3B11F9B7DB900060302 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				0B6DA3AF1F9B7DB200060302 /* SliderSendable.swift */,
+				0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B6DA3B01F9B7DB200060302 /* SliderSendable.swift in Sources */,
+				0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */,
 				0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */,
 				0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */,
 				0B8BB9D51F8D85120002732F /* GradientFill.swift in Sources */,
