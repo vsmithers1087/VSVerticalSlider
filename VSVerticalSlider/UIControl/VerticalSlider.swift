@@ -10,9 +10,9 @@ import UIKit
 
 public class VerticalSlider: UIControl {
     
-    public weak var delegate: SliderSendable?
+    private weak var delegate: SliderSendable?
     private let gradientFill = GradientFill()
-    private var positiveImageView: PoleImageView?
+    public var positiveImageView: PoleImageView?
     private var negativeImageView: PoleImageView?
     public var primaryColor = UIColor.clear
     private let frameWidth: CGFloat = 40.0
@@ -69,6 +69,7 @@ public class VerticalSlider: UIControl {
             let poleImageView = PoleImageView(image: image)
             poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
             poleImageView.layer.borderWidth = 1.0
+            poleImageView.setAnimation(positive: isPositive)
             addSubview(poleImageView)
             return poleImageView
         }
@@ -97,8 +98,18 @@ public class VerticalSlider: UIControl {
         if location <= maxScrollPoint && location >= minScrollPoint{
             gradientFill.drawGradients(forCurrentPoint: location)
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - sliderOffset) - 100))
+            animatePoles(forValue: currentVal)
             delegate?.valueDidChange(value: currentVal)
             print("current value: \(currentVal)")
+        }
+    }
+    
+    private func animatePoles(forValue value: Int) {
+        if value == 100 {
+            positiveImageView?.propertyAnimator.startAnimation()
+        }
+        if value == 0 {
+            negativeImageView?.propertyAnimator.startAnimation()
         }
     }
 
