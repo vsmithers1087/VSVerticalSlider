@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol SliderSendable: class {
+public protocol VSVerticalSliderDelegate: class {
     func valueDidChange(value: Int)
 }

@@ -10,7 +10,7 @@ import UIKit
 
 public class VerticalSlider: UIControl {
     
-    private weak var delegate: SliderSendable?
+    private weak var delegate: VSVerticalSliderDelegate?
     private let gradientFill = GradientFill()
     public var positiveImageView: PoleImageView?
     private var negativeImageView: PoleImageView?
@@ -105,10 +105,10 @@ public class VerticalSlider: UIControl {
     }
     
     private func animatePoles(forValue value: Int) {
-        if value == 100 {
+        if value > 95 {
             positiveImageView?.propertyAnimator.startAnimation()
         }
-        if value == 0 {
+        if value < 5 {
             negativeImageView?.propertyAnimator.startAnimation()
         }
     }

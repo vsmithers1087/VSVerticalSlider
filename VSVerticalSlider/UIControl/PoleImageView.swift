@@ -6,11 +6,32 @@
 //  Copyright © 2017 Vincent Smithers. All rights reserved.
 //
 
-//animate
 // default images
+
 // readme
-    //- images
-    //- gifs
+    // description / about
+        // animation gif
+
+    // quickstart
+        // with playground
+        // sample project
+
+    // Add to Project
+        // setup with pods
+        // setup with carthage
+        // setup with storyboard
+        // images
+        // setup programatically
+        // conforming to protocol
+        // delegate methods / set slider value
+            // gif
+
+    // todo check list
+        // custom stackview
+        // unit tests
+        //
+
+    // SUBMIT TO BOHEMOTH RESOURCE REPO
 
 import UIKit
 
