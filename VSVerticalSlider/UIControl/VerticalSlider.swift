@@ -9,7 +9,6 @@
 import UIKit
 
 public class VerticalSlider: UIControl {
-    
     public weak var delegate: SliderSendable?
     public var primaryColor = UIColor.clear
     private let gradientFill = GradientFill()
@@ -20,22 +19,26 @@ public class VerticalSlider: UIControl {
 
     private var minScrollPoint: CGFloat!
     private var maxScrollPoint: CGFloat!
-    private var offset: CGFloat!
+    private var sliderOffset: CGFloat!
+    private var originOffsetX: CGFloat!
+    private var originOffsetY: CGFloat!
     private var scrollUnit : CGFloat!
-    
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil){
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
         self.init(frame: CGRect.zero)
         self.primaryColor = primaryColor
         frameHeight  = height > 200 ? height : 200
         frame.origin = CGPoint(x: 20, y: 20)
+        originOffsetX = offsetX
+        originOffsetY = offsetY
         setup()
         setupPoleImageView(poleImage: positiveImage, isPositive: true)
         setupPoleImageView(poleImage: negativeImage, isPositive: false)
@@ -45,7 +48,7 @@ public class VerticalSlider: UIControl {
         minScrollPoint = frameWidth + placeholderHeight
         maxScrollPoint = frameHeight
         scrollUnit = (maxScrollPoint - minScrollPoint) / 100
-        offset = (frameWidth + placeholderHeight) / scrollUnit
+        sliderOffset = (frameWidth + placeholderHeight) / scrollUnit
     }
     
     private func setup(){
@@ -54,7 +57,7 @@ public class VerticalSlider: UIControl {
         setFrameContraints()
         setupPanGesture()
         setupTapGesture()
-        transform = CGAffineTransform(translationX: 20, y: 20)
+        transform = CGAffineTransform(translationX: originOffsetX, y: originOffsetY)
     }
     
     private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) {
@@ -88,7 +91,7 @@ public class VerticalSlider: UIControl {
         let location = gesture.location(in: self).y
         if location <= maxScrollPoint && location >= minScrollPoint{
             gradientFill.drawGradients(forCurrentPoint: location)
-            currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - offset) - 100))
+            currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - sliderOffset) - 100))
             delegate?.valueDidChange(value: currentVal)
             print("current value: \(currentVal)")
         }
@@ -107,8 +110,8 @@ extension VerticalSlider {
     
     private func setFrame(){
         translatesAutoresizingMaskIntoConstraints = false
-        let frame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: frameWidth, height: frameHeight + placeholderHeight)
-        gradientFill.setup(withFrame: frame, primaryColor: primaryColor)
+        let gradientFrame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: frameWidth, height: frameHeight + placeholderHeight)
+        gradientFill.setup(withFrame: gradientFrame, primaryColor: primaryColor)
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()
