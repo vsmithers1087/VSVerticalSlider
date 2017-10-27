@@ -11,8 +11,10 @@ import UIKit
 public class VerticalSlider: UIControl {
     
     public weak var delegate: SliderSendable?
-    public var primaryColor = UIColor.clear
     private let gradientFill = GradientFill()
+    private var positiveImageView: PoleImageView?
+    private var negativeImageView: PoleImageView?
+    public var primaryColor = UIColor.clear
     private let frameWidth: CGFloat = 40.0
     private let placeholderHeight: CGFloat = 20.0
     private var frameHeight: CGFloat!
@@ -41,8 +43,8 @@ public class VerticalSlider: UIControl {
         originOffsetX = offsetX
         originOffsetY = offsetY
         setup()
-        setupPoleImageView(poleImage: positiveImage, isPositive: true)
-        setupPoleImageView(poleImage: negativeImage, isPositive: false)
+        positiveImageView = setupPoleImageView(poleImage: positiveImage, isPositive: true)
+        negativeImageView = setupPoleImageView(poleImage: negativeImage, isPositive: false)
     }
     
     private func setSliderContants() {
@@ -61,14 +63,16 @@ public class VerticalSlider: UIControl {
         transform = CGAffineTransform(translationX: originOffsetX, y: originOffsetY)
     }
     
-    private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) {
+    private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) -> PoleImageView? {
         let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frameHeight)
         if let image = poleImage {
             let poleImageView = PoleImageView(image: image)
             poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
             poleImageView.layer.borderWidth = 1.0
             addSubview(poleImageView)
+            return poleImageView
         }
+        return nil
     }
     
     private func setupPanGesture(){
