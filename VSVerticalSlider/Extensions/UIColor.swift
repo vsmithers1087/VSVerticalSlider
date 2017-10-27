@@ -27,4 +27,12 @@ extension UIColor {
         }
         return nil
     }
+    
+    public class func getAnalagous(color: UIColor) -> UIColor? {
+        if let rgbValues = getRGBForColor(color) {
+            let compliment = UIColor.init(red: rgbValues.r - 0.3, green: rgbValues.g - 0.3, blue: rgbValues.b - 0.3, alpha: 0.5)
+            return compliment
+        }
+        return nil
+    }
 }

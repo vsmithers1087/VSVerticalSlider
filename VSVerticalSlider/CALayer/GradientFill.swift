@@ -19,6 +19,7 @@ class GradientFill: CALayer {
     var postiveColors = [CGColor]()
     var negativeColors = [CGColor]()
     var currentPoint: CGFloat!
+    var primaryColor: UIColor!
     
     override init() {
         super.init()
@@ -30,6 +31,7 @@ class GradientFill: CALayer {
     
     func setup(withFrame frame: CGRect, primaryColor: UIColor) {
         self.frame = frame
+        self.primaryColor = primaryColor
         setColors(color: primaryColor)
         currentPoint = frame.height / 2
         negativeGradient.colors = negativeColors
@@ -56,8 +58,10 @@ class GradientFill: CALayer {
     
     func setBackgroundGradient() {
         let backgroundGrandient = CAGradientLayer()
-        backgroundGrandient.colors = postiveColors
         backgroundGrandient.frame = frame
+        guard let analagousColor = UIColor.getAnalagous(color: primaryColor) else { return }
+        let analagousColors = getColorArray(color: analagousColor, count: 13)
+        backgroundGrandient.colors = analagousColors
         addSublayer(backgroundGrandient)
     }
     
@@ -76,8 +80,8 @@ class GradientFill: CALayer {
     }
     
     func setStartingPoints() {
-        positiveStartPoint = CGPoint(x: 0.1, y:0.3)
-        negativeStartPoint = CGPoint(x: 0.1, y: 0.3)
+        positiveStartPoint = CGPoint(x: 0.1, y:0.1)
+        negativeStartPoint = CGPoint(x: 0.1, y: 0.1)
         positiveGradient.startPoint = positiveStartPoint
         negativeGradient.startPoint = positiveStartPoint
     }

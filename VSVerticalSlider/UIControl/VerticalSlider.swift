@@ -9,6 +9,7 @@
 import UIKit
 
 public class VerticalSlider: UIControl {
+    
     public weak var delegate: SliderSendable?
     public var primaryColor = UIColor.clear
     private let gradientFill = GradientFill()
@@ -112,6 +113,8 @@ extension VerticalSlider {
         translatesAutoresizingMaskIntoConstraints = false
         let gradientFrame = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: frameWidth, height: frameHeight + placeholderHeight)
         gradientFill.setup(withFrame: gradientFrame, primaryColor: primaryColor)
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.purple.cgColor
         layer.addSublayer(gradientFill)
         layoutIfNeeded()
         layoutSubviews()
