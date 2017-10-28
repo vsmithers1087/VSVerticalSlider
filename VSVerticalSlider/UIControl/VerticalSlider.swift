@@ -43,8 +43,8 @@ public class VerticalSlider: UIControl {
         originOffsetX = offsetX
         originOffsetY = offsetY
         setup()
-        positiveImageView = setupPoleImageView(poleImage: positiveImage, isPositive: true)
-        negativeImageView = setupPoleImageView(poleImage: negativeImage, isPositive: false)
+        positiveImageView = positiveImage == nil ? setupPoleImageView(poleImage: defaultPlusImage(), isPositive: true) : setupPoleImageView(poleImage: positiveImage, isPositive: true)
+        negativeImageView = negativeImage == nil ? setupPoleImageView(poleImage: defaultMinusImage(), isPositive: false) : setupPoleImageView(poleImage: negativeImage, isPositive: false)
     }
     
     private func setSliderContants() {
@@ -141,4 +141,19 @@ extension VerticalSlider {
         width.isActive = true
         height.isActive = true
     }
+}
+
+extension VerticalSlider {
+    
+    public func defaultPlusImage() -> UIImage {
+        let bundle = Bundle(for: type(of: self))
+        print(UIImage(named: "plus.png", in: bundle, compatibleWith: nil)!)
+        return UIImage(named: "plus.png", in: bundle, compatibleWith: nil)!
+    }
+    
+    public func defaultMinusImage() -> UIImage {
+        let bundle = Bundle(for: type(of: self))
+        return UIImage(named: "minus.jpeg", in: bundle, compatibleWith: nil)!
+    }
+    
 }
