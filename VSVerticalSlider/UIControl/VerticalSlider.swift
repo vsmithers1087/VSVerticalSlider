@@ -10,7 +10,7 @@ import UIKit
 
 public class VerticalSlider: UIControl {
     
-    private weak var delegate: VSVerticalSliderDelegate?
+    public weak var delegate: VSVerticalSliderDelegate?
     private let gradientFill = GradientFill()
     public var positiveImageView: PoleImageView?
     private var negativeImageView: PoleImageView?
