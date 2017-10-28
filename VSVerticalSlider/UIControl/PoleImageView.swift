@@ -27,9 +27,9 @@
             // gif
 
     // todo check list
-        // custom stackview
+        // Slider Panel: custom stackview with multiple slider
         // unit tests
-        //
+        // Image Assets
 
     // SUBMIT TO BOHEMOTH RESOURCE REPO
 

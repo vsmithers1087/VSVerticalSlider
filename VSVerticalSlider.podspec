@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, '10.0'
   spec.requires_arc = true
+  spec.resource = 'Resources/VSVerticalSlider.bundle'
   spec.source = { git: 'https://github.com/vsmithers1087/VSVerticalSlider', tag: 'v#{1.0.0}', submodules: false }
   spec.source_files = 'VSVerticalSlider/**/*.{h,swift}'
 end
