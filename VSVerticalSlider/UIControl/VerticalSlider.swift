@@ -35,7 +35,7 @@ public class VerticalSlider: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage? = nil, negativeImage: UIImage? = nil, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
+    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage, negativeImage: UIImage, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
         self.init(frame: CGRect.zero)
         self.primaryColor = primaryColor
         frameHeight  = height > 200 ? height : 200
@@ -43,8 +43,8 @@ public class VerticalSlider: UIControl {
         originOffsetX = offsetX
         originOffsetY = offsetY
         setup()
-        positiveImageView = positiveImage == nil ? setupPoleImageView(poleImage: defaultPlusImage(), isPositive: true) : setupPoleImageView(poleImage: positiveImage, isPositive: true)
-        negativeImageView = negativeImage == nil ? setupPoleImageView(poleImage: defaultMinusImage(), isPositive: false) : setupPoleImageView(poleImage: negativeImage, isPositive: false)
+        positiveImageView = setupPoleImageView(poleImage: positiveImage, isPositive: true)
+        negativeImageView = setupPoleImageView(poleImage: negativeImage, isPositive: false)
     }
     
     private func setSliderContants() {
@@ -63,17 +63,14 @@ public class VerticalSlider: UIControl {
         transform = CGAffineTransform(translationX: originOffsetX, y: originOffsetY)
     }
     
-    private func setupPoleImageView(poleImage: UIImage?, isPositive: Bool) -> PoleImageView? {
+    private func setupPoleImageView(poleImage: UIImage, isPositive: Bool) -> PoleImageView? {
         let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frameHeight)
-        if let image = poleImage {
-            let poleImageView = PoleImageView(image: image)
-            poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
-            poleImageView.layer.borderWidth = 1.0
-            poleImageView.setAnimation(positive: isPositive)
-            addSubview(poleImageView)
-            return poleImageView
-        }
-        return nil
+        let poleImageView = PoleImageView(image: poleImage)
+        poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
+        poleImageView.layer.borderWidth = 1.0
+        poleImageView.setAnimation(positive: isPositive)
+        addSubview(poleImageView)
+        return poleImageView
     }
     
     private func setupPanGesture(){
@@ -143,17 +140,3 @@ extension VerticalSlider {
     }
 }
 
-extension VerticalSlider {
-    
-    public func defaultPlusImage() -> UIImage {
-        let bundle = Bundle(for: type(of: self))
-        print(UIImage(named: "plus.png", in: bundle, compatibleWith: nil)!)
-        return UIImage(named: "plus.png", in: bundle, compatibleWith: nil)!
-    }
-    
-    public func defaultMinusImage() -> UIImage {
-        let bundle = Bundle(for: type(of: self))
-        return UIImage(named: "minus.jpeg", in: bundle, compatibleWith: nil)!
-    }
-    
-}
