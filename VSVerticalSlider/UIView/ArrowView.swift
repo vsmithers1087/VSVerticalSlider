@@ -6,12 +6,12 @@
 //  Copyright © 2017 Vincent Smithers. All rights reserved.
 //
 
-// default images
+// No Images Draw On Custom View
 
 // readme
     // description / about
         // animation gif
-
+        
     // quickstart
         // with playground
         // sample project
@@ -33,15 +33,17 @@
 
     // SUBMIT TO BOHEMOTH RESOURCE REPO
 
+public enum ArrowDirection {
+    case up
+    case down
+}
+
 import UIKit
 
-public class PoleImageView: UIImageView {
+public class ArrowView: UIView {
     
     public var propertyAnimator: UIViewPropertyAnimator!
-    
-    public override init(image: UIImage?) {
-        super.init(image: image)
-    }
+    public var direction: ArrowDirection!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,12 +52,20 @@ public class PoleImageView: UIImageView {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public convenience init(frame: CGRect, direction: ArrowDirection) {
+        self.init(frame: frame)
+        self.direction = direction
+        layer.borderWidth = 1.0
+        setAnimation()
+    }
+
 }
 
-extension PoleImageView {
+extension ArrowView {
     
-    public func setAnimation(positive: Bool) {
-        let offsetY: CGFloat = positive ? 8 : -8
+    public func setAnimation() {
+        let offsetY: CGFloat = direction == .up ? 8 : -8
         propertyAnimator = UIViewPropertyAnimator(duration: 0.3, curve: .easeOut) {
             self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             self.center.y -= offsetY
@@ -66,7 +76,7 @@ extension PoleImageView {
             self.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.center.y += offsetY
             self.layer.opacity = 1
-            self.setAnimation(positive: positive)
+            self.setAnimation()
         }
     }
 }

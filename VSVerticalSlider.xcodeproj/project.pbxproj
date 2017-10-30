@@ -8,23 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */; };
-		0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */; };
+		0B7C8CF21F9B74C800FD51B2 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C8CF11F9B74C800FD51B2 /* ArrowView.swift */; };
 		0B8BB9CB1F8D833B0002732F /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D11F8D84670002732F /* VerticalSlider.swift */; };
 		0B8BB9D51F8D85120002732F /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BB9D41F8D85120002732F /* GradientFill.swift */; };
-		0BDF81501FA546B20081E297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B94FE5A1FA536DB0033CE46 /* Assets.xcassets */; };
 		0BEEAA511F9D544C00093404 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEEAA501F9D544C00093404 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSVerticalSliderDelegate.swift; sourceTree = "<group>"; };
-		0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoleImageView.swift; sourceTree = "<group>"; };
+		0B7C8CF11F9B74C800FD51B2 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		0B8BB9C61F8D833B0002732F /* VSVerticalSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VSVerticalSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSVerticalSlider.h; sourceTree = "<group>"; };
 		0B8BB9CA1F8D833B0002732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8BB9D11F8D84670002732F /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		0B8BB9D41F8D85120002732F /* GradientFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientFill.swift; sourceTree = "<group>"; };
-		0B94FE5A1FA536DB0033CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BEEAA501F9D544C00093404 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B09CEB71FA6A57900E77B09 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C8CF11F9B74C800FD51B2 /* ArrowView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		0B6DA3B11F9B7DB900060302 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +72,11 @@
 		0B8BB9C81F8D833B0002732F /* VSVerticalSlider */ = {
 			isa = PBXGroup;
 			children = (
+				0B09CEB71FA6A57900E77B09 /* UIView */,
 				0B8BB9D61F8D851C0002732F /* CALayer */,
 				0B8BB9D31F8D846D0002732F /* UIControl */,
 				0B6DA3B11F9B7DB900060302 /* Protocol */,
 				0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */,
-				0B94FE5A1FA536DB0033CE46 /* Assets.xcassets */,
 				0B8BB9CA1F8D833B0002732F /* Info.plist */,
 				0BEEAA521F9D545400093404 /* Extensions */,
 			);
@@ -81,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				0B8BB9D11F8D84670002732F /* VerticalSlider.swift */,
-				0B7C8CF11F9B74C800FD51B2 /* PoleImageView.swift */,
 			);
 			path = UIControl;
 			sourceTree = "<group>";
@@ -172,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BDF81501FA546B20081E297 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */,
-				0B7C8CF21F9B74C800FD51B2 /* PoleImageView.swift in Sources */,
+				0B7C8CF21F9B74C800FD51B2 /* ArrowView.swift in Sources */,
 				0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */,
 				0B8BB9D51F8D85120002732F /* GradientFill.swift in Sources */,
 				0BEEAA511F9D544C00093404 /* UIColor.swift in Sources */,

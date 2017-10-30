@@ -12,8 +12,8 @@ public class VerticalSlider: UIControl {
     
     public weak var delegate: VSVerticalSliderDelegate?
     private let gradientFill = GradientFill()
-    public var positiveImageView: PoleImageView?
-    private var negativeImageView: PoleImageView?
+    public var positiveaArrowView: ArrowView!
+    private var negativeArrowView: ArrowView!
     public var primaryColor = UIColor.clear
     private let frameWidth: CGFloat = 40.0
     private let placeholderHeight: CGFloat = 20.0
@@ -35,7 +35,7 @@ public class VerticalSlider: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public convenience init(height: CGFloat, primaryColor: UIColor, positiveImage: UIImage, negativeImage: UIImage, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
+    public convenience init(height: CGFloat, primaryColor: UIColor, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
         self.init(frame: CGRect.zero)
         self.primaryColor = primaryColor
         frameHeight  = height > 200 ? height : 200
@@ -43,8 +43,7 @@ public class VerticalSlider: UIControl {
         originOffsetX = offsetX
         originOffsetY = offsetY
         setup()
-        positiveImageView = setupPoleImageView(poleImage: positiveImage, isPositive: true)
-        negativeImageView = setupPoleImageView(poleImage: negativeImage, isPositive: false)
+        setupArrowView()
     }
     
     private func setSliderContants() {
@@ -63,17 +62,11 @@ public class VerticalSlider: UIControl {
         transform = CGAffineTransform(translationX: originOffsetX, y: originOffsetY)
     }
     
-    private func setupPoleImageView(poleImage: UIImage, isPositive: Bool) -> PoleImageView? {
-        let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frameHeight)
-        let poleImageView = PoleImageView(image: poleImage)
-        poleImageView.backgroundColor = UIColor.white
-        poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
-        poleImageView.layer.borderWidth = 1.0
-        poleImageView.setAnimation(positive: isPositive)
-        poleImageView.contentMode = .scaleAspectFit
-        poleImageView.backgroundColor = UIColor.black
-        addSubview(poleImageView)
-        return poleImageView
+    private func setupArrowView() {
+        positiveaArrowView = ArrowView(frame: CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight), direction: .up)
+        negativeArrowView = ArrowView(frame: CGRect(x: 0, y: frameHeight, width: frameWidth, height: frameHeight), direction: .down)
+        addSubview(positiveaArrowView)
+        addSubview(negativeArrowView)
     }
     
     private func setupPanGesture(){
@@ -106,10 +99,10 @@ public class VerticalSlider: UIControl {
     
     private func animatePoles(forValue value: Int) {
         if value > 95 {
-            positiveImageView?.propertyAnimator.startAnimation()
+            positiveaArrowView.propertyAnimator.startAnimation()
         }
         if value < 5 {
-            negativeImageView?.propertyAnimator.startAnimation()
+            negativeArrowView.propertyAnimator.startAnimation()
         }
     }
 
