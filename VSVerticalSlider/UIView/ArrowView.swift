@@ -6,8 +6,6 @@
 //  Copyright © 2017 Vincent Smithers. All rights reserved.
 //
 
-// No Images Draw On Custom View
-
 // readme
     // description / about
         // animation gif
@@ -33,17 +31,18 @@
 
     // SUBMIT TO BOHEMOTH RESOURCE REPO
 
+import UIKit
+
 public enum ArrowDirection {
     case up
     case down
 }
 
-import UIKit
-
 public class ArrowView: UIView {
     
     public var propertyAnimator: UIViewPropertyAnimator!
     public var direction: ArrowDirection!
+    public var color: UIColor!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,13 +52,28 @@ public class ArrowView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public convenience init(frame: CGRect, direction: ArrowDirection) {
+    public convenience init(frame: CGRect, direction: ArrowDirection, color: UIColor) {
         self.init(frame: frame)
         self.direction = direction
         layer.borderWidth = 1.0
+        backgroundColor = UIColor.getCompliment(color: color)!
         setAnimation()
     }
-
+    
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let topPoint = direction == .up ? CGPoint(x: frame.width / 2, y: 12) : CGPoint(x: frame.width / 2, y: frame.height - 12)
+        let bottomLeftPoint = direction == .up ? CGPoint(x: 10, y: frame.height - 10) : CGPoint(x: 10, y: 10)
+        let bottomRightPoint = direction == .up ? CGPoint(x: frame.width - 10, y: frame.height - 10) : CGPoint(x: frame.width - 10, y:  10)
+        let path = UIBezierPath()
+        path.lineWidth = 2.0
+        path.move(to: topPoint)
+        path.addLine(to: bottomLeftPoint)
+        path.addLine(to: bottomRightPoint)
+        path.close()
+        path.fill(with: .softLight, alpha: 1.0)
+        path.stroke(with: .multiply, alpha: 1.0)
+    }
 }
 
 extension ArrowView {

@@ -5,7 +5,7 @@ import VSVerticalSlider
 import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
-let newColor = UIColor.init(red: 0 / 255, green: 150 / 255, blue: 0 / 255, alpha: 1.0)
+let newColor = UIColor.init(red: 8 / 255, green: 150 / 255, blue: 200 / 255, alpha: 1.0)
 let containerView = UIView(frame: CGRect(x: 20, y: 20, width: 300, height: 500))
 containerView.backgroundColor = UIColor.white
 let slider = VerticalSlider(height: 400.0, primaryColor: newColor)

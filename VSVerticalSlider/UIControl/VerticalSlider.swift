@@ -63,8 +63,8 @@ public class VerticalSlider: UIControl {
     }
     
     private func setupArrowView() {
-        positiveaArrowView = ArrowView(frame: CGRect(x: 0, y: 0, width: frameWidth, height: frameHeight), direction: .up)
-        negativeArrowView = ArrowView(frame: CGRect(x: 0, y: frameHeight, width: frameWidth, height: frameHeight), direction: .down)
+        positiveaArrowView = ArrowView(frame: CGRect(x: 0, y: 0, width: frameWidth, height: frameWidth), direction: .up, color: primaryColor)
+        negativeArrowView = ArrowView(frame: CGRect(x: 0, y: frameHeight, width: frameWidth, height: frameWidth), direction: .down, color: UIColor.getCompliment(color: primaryColor)!)
         addSubview(positiveaArrowView)
         addSubview(negativeArrowView)
     }
