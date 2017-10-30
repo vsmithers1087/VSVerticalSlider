@@ -66,9 +66,12 @@ public class VerticalSlider: UIControl {
     private func setupPoleImageView(poleImage: UIImage, isPositive: Bool) -> PoleImageView? {
         let origin: CGPoint = isPositive ? CGPoint(x: 0, y: 0) : CGPoint(x: 0, y: frameHeight)
         let poleImageView = PoleImageView(image: poleImage)
+        poleImageView.backgroundColor = UIColor.white
         poleImageView.frame = CGRect(x: origin.x, y: origin.y, width: frameWidth, height: frameWidth)
         poleImageView.layer.borderWidth = 1.0
         poleImageView.setAnimation(positive: isPositive)
+        poleImageView.contentMode = .scaleAspectFit
+        poleImageView.backgroundColor = UIColor.black
         addSubview(poleImageView)
         return poleImageView
     }
