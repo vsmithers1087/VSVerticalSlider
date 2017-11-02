@@ -66,13 +66,16 @@ public class ArrowView: UIView {
         let bottomLeftPoint = direction == .up ? CGPoint(x: 10, y: frame.height - 10) : CGPoint(x: 10, y: 10)
         let bottomRightPoint = direction == .up ? CGPoint(x: frame.width - 10, y: frame.height - 10) : CGPoint(x: frame.width - 10, y:  10)
         let path = UIBezierPath()
-        path.lineWidth = 2.0
+        path.lineWidth = 3.0
         path.move(to: topPoint)
         path.addLine(to: bottomLeftPoint)
         path.addLine(to: bottomRightPoint)
         path.close()
-        path.fill(with: .softLight, alpha: 1.0)
-        path.stroke(with: .multiply, alpha: 1.0)
+        
+        UIColor.white.setStroke()
+        UIColor(red: 0, green: 0, blue: 0, alpha: 0.33).setFill()
+        path.stroke()
+        path.fill()
     }
 }
 

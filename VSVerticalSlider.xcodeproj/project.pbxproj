@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B261F001FAA7EA1007D2DE5 /* ReplicateFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B261EFF1FAA7EA1007D2DE5 /* ReplicateFill.swift */; };
 		0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */; };
 		0B7C8CF21F9B74C800FD51B2 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C8CF11F9B74C800FD51B2 /* ArrowView.swift */; };
 		0B8BB9CB1F8D833B0002732F /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BB9C91F8D833B0002732F /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B261EFF1FAA7EA1007D2DE5 /* ReplicateFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplicateFill.swift; sourceTree = "<group>"; };
 		0B6DA3AF1F9B7DB200060302 /* VSVerticalSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSVerticalSliderDelegate.swift; sourceTree = "<group>"; };
 		0B7C8CF11F9B74C800FD51B2 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		0B8BB9C61F8D833B0002732F /* VSVerticalSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VSVerticalSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				0B8BB9D41F8D85120002732F /* GradientFill.swift */,
+				0B261EFF1FAA7EA1007D2DE5 /* ReplicateFill.swift */,
 			);
 			path = CALayer;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B261F001FAA7EA1007D2DE5 /* ReplicateFill.swift in Sources */,
 				0B6DA3B01F9B7DB200060302 /* VSVerticalSliderDelegate.swift in Sources */,
 				0B7C8CF21F9B74C800FD51B2 /* ArrowView.swift in Sources */,
 				0B8BB9D21F8D84670002732F /* VerticalSlider.swift in Sources */,

@@ -83,7 +83,7 @@ public class VerticalSlider: UIControl {
         let valueOffset = value > 75 ? -5 : 0
         let invertedHeight = (CGFloat(value + valueOffset) * ((frameHeight - frameWidth) / 100))
         let scaledHeight = ((frameHeight - invertedHeight))
-        gradientFill.drawGradients(forCurrentPoint: scaledHeight)
+        //gradientFill.drawGradients(forCurrentPoint: scaledHeight)
     }
     
     public func updateValue(forGesture gesture: UIGestureRecognizer) {
