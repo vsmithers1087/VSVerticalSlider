@@ -5,7 +5,6 @@
 //  Created by Vincent Smithers on 10/22/17.
 //  Copyright © 2017 Vincent Smithers. All rights reserved.
 //
-
 import UIKit
 
 public typealias RGBValues = (r: CGFloat, g: CGFloat, b: CGFloat)

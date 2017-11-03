@@ -9,20 +9,6 @@
 import Foundation
 import UIKit
 
-/*
- let duration: CFTimeInterval = 1.0
- 
- let shrink = CABasicAnimation(keyPath: "transform.scale")
- shrink.fromValue = 1.0
- shrink.toValue = 0.7
- shrink.duration = duration
- shrink.repeatCount = Float.infinity
- 
- bar.add(shrink, forKey: nil)
- 
- r.instanceDelay = duration/Double(nrDots)
- */
-
 public class Replicatant: CAReplicatorLayer {
     
     var color: UIColor!
@@ -55,14 +41,4 @@ public class Replicatant: CAReplicatorLayer {
         instanceGreenOffset = offsetStep
     }
 }
-
-//public class ReplicantFill {
-//    
-//    var positiveReplicant = Replicatant()
-//    var negativeReplicant = Replicatant()
-//    var color: UIColor
-//    var currentPoint: CGPoint
-//    
-//    
-//}
 
