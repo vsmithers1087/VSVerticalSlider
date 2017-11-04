@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   VSVerticalSlider:
-    :commit: b00220f5bca3f86aba206d1372c6a64c0962c51e
+    :commit: 8a55238f63b8f985b4bc671d5ad918fb845f3926
     :git: https://github.com/vsmithers1087/VSVerticalSlider.git
 
 SPEC CHECKSUMS:

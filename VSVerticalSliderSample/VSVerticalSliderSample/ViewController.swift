@@ -10,19 +10,20 @@ import UIKit
 import VSVerticalSlider
 
 class ViewController: UIViewController {
-    
+
+    @IBOutlet weak var percentageLabel: UILabel!
     
     @IBOutlet weak var verticalSlider: VerticalSlider!
-    @IBOutlet weak var percentageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        verticalSlider.delegate = self
+        //verticalSlider.delegate = self
+        setupSlider()
     }
     
     private func setupSlider() {
         let primaryColor = UIColor.init(red: 70 / 255, green: 150 / 255, blue: 200 / 255, alpha: 1.0)
-        let slider = VerticalSlider(height: 500.0, primaryColor: primaryColor, offsetX: 20, offsetY: 40.0)
+        let slider = VerticalSlider(height: 500.0 - 13, primaryColor: primaryColor, offsetX: 20, offsetY: 40.0)
         slider.delegate = self
         view.addSubview(slider)
     }
@@ -31,7 +32,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 
 extension ViewController: VSVerticalSliderDelegate {
