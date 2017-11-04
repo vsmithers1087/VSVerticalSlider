@@ -64,7 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="percentageLabel" destination="r4b-ho-7nP" id="evB-xb-1ww"/>
-                        <outlet property="sliderContainerView" destination="hIn-o6-WrO" id="RO0-t8-EYG"/>
+                        <outlet property="verticalSlider" destination="hIn-o6-WrO" id="JfY-xF-gFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,12 +11,13 @@ import VSVerticalSlider
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var sliderContainerView: VerticalSlider!
+    
+    @IBOutlet weak var verticalSlider: VerticalSlider!
     @IBOutlet weak var percentageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupSlider()
+        verticalSlider.delegate = self
     }
     
     private func setupSlider() {
