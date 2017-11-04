@@ -1,0 +1,24 @@
+{
+  "name": "VSVerticalSlider",
+  "version": "1.0.0",
+  "summary": "Animatable and customizable vertical slider written in Swift4",
+  "homepage": "https://github.com/vsmithers1087",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Vincent Smithers": "vsmithers1087@gmail.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "resources": "Resources/VSVerticalSlider.bundle",
+  "source": {
+    "git": "https://github.com/vsmithers1087/VSVerticalSlider",
+    "tag": "v#{1.0.0}",
+    "submodules": false
+  },
+  "source_files": "VSVerticalSlider/**/*.{h,swift}"
+}

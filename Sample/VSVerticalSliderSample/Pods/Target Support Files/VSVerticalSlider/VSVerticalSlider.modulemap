@@ -1,0 +1,6 @@
+framework module VSVerticalSlider {
+  umbrella header "VSVerticalSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,21 @@
+PODS:
+  - VSVerticalSlider (1.0.0)
+
+DEPENDENCIES:
+  - VSVerticalSlider (from `https://github.com/vsmithers1087/VSVerticalSlider.git`)
+
+EXTERNAL SOURCES:
+  VSVerticalSlider:
+    :git: https://github.com/vsmithers1087/VSVerticalSlider.git
+
+CHECKOUT OPTIONS:
+  VSVerticalSlider:
+    :commit: 4aae2d41dfe4dee537ecca902c93b8d5d9415fad
+    :git: https://github.com/vsmithers1087/VSVerticalSlider.git
+
+SPEC CHECKSUMS:
+  VSVerticalSlider: 560ae851d9e986f59cea9deaf2d232743b277d13
+
+PODFILE CHECKSUM: 03caca5cf9c6defa4a3e4bdb226b3669ae10204d
+
+COCOAPODS: 1.3.1
