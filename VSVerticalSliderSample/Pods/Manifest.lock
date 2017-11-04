@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   VSVerticalSlider:
-    :commit: 4aae2d41dfe4dee537ecca902c93b8d5d9415fad
+    :commit: 7a47c7e8148f9a5e7599c8ca1e2ff5e58f4e9bea
     :git: https://github.com/vsmithers1087/VSVerticalSlider.git
 
 SPEC CHECKSUMS:
   VSVerticalSlider: 560ae851d9e986f59cea9deaf2d232743b277d13
 
-PODFILE CHECKSUM: 03caca5cf9c6defa4a3e4bdb226b3669ae10204d
+PODFILE CHECKSUM: f4fd51d1cd3837e498aa359ed0b3184a4c9bf926
 
 COCOAPODS: 1.3.1

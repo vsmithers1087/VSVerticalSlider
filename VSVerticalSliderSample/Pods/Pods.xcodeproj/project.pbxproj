@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09E076E30CFA660BE87451630155AA4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D5BE6E914D558D90D70D45D078E5F1 /* UIColor.swift */; };
 		1492CF1B3E35EEC9C77C015106D938C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		1BF762BAEE44F8F94AF4CD4AFBC473CF /* Pods-VSVerticalSliderSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9288C247897B0FCEE0B554811FD1A7 /* Pods-VSVerticalSliderSample-dummy.m */; };
-		2B1C4202AE28519ACA20441069872EDD /* VSVerticalSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CABF48B9014D2F16190F4EF6FB2DF /* VSVerticalSliderDelegate.swift */; };
+		3067E8F40F5943C306C9D0AEC9573E42 /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D481ABDF8CF7E57F96A2F71DAECE9D /* GradientFill.swift */; };
+		437E4E83FC751C8965CF3ED677D706A2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C54EBC62CD11150AE7116D5998BA4A6 /* UIColor.swift */; };
 		7644041A685E80ECBF1C17E7871CB8B1 /* Pods-VSVerticalSliderSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D3F4391E406C250CBBC0BA5C77732AE /* Pods-VSVerticalSliderSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76FB3E23A2687A3186880AA2C4AF1E92 /* VSVerticalSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF46A1A930791CBBE04AB4356E069DE /* VSVerticalSlider-dummy.m */; };
 		7C02CF26F6934B33CDFBF9E29353C17B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8FA693A24C68467BE9A60A3FDE73C6E4 /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5159D7F4E0B0FFD71817BFF59775DD /* GradientFill.swift */; };
-		90A0D01F3854385029F531CFE48C9DEB /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E9A8311E62E18A2B2C269A5CEF0EBA /* VerticalSlider.swift */; };
-		A439667566F319607C50D5EBF21F7F95 /* VSVerticalSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 005C9ACF9BA1B1F34A0254D37E04EEC8 /* VSVerticalSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA36B3EBCB084E3A08D600F6E5FB4642 /* PoleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C006158B60842C6F893072B4AF9C7794 /* PoleImageView.swift */; };
-		D9DF57C1A400CDBF0D355CBA659D4C2C /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = D52FED1D52446BEA7E88C3684CC7C2FE /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA13F8BBB6FDC29560E52529C80BAAA9 /* VSVerticalSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA736AC0072A9D155AD26AE09DC4888 /* VSVerticalSlider-dummy.m */; };
+		7CA290A9561492C6FF1EDC5D01DC9F36 /* VSVerticalSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3C0D2F1490F66F20B1E08BD6E816DD /* VSVerticalSliderDelegate.swift */; };
+		91945BAB502A66E09C37933A6F1B5C72 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B8537288982C18034D0D5FB552617 /* VerticalSlider.swift */; };
+		A439667566F319607C50D5EBF21F7F95 /* VSVerticalSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AFE24F6A6DC450B88FDA6462DAA42F8 /* VSVerticalSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5A753BCF4943E0A3D53AAC2E491A0C7 /* ReplicateFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E52503F1040A9382EE108D5BAA3ABF /* ReplicateFill.swift */; };
+		D9DF57C1A400CDBF0D355CBA659D4C2C /* VSVerticalSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = E891B1FC542A30123451FC3DB3DE64E2 /* VSVerticalSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E268F6A18784787680EACA527AFB6809 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1559409CB1BDF96961BEF550D7949 /* ArrowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,32 +33,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		005C9ACF9BA1B1F34A0254D37E04EEC8 /* VSVerticalSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSVerticalSlider-umbrella.h"; sourceTree = "<group>"; };
 		013F556B91648858B382FDDC93D94D32 /* Pods-VSVerticalSliderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSVerticalSliderSample.debug.xcconfig"; sourceTree = "<group>"; };
 		0904F47A1AC8732513E332D3826E68F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B355BC820930ECBBCCED600388844CB /* Pods-VSVerticalSliderSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSVerticalSliderSample-frameworks.sh"; sourceTree = "<group>"; };
+		0C54EBC62CD11150AE7116D5998BA4A6 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = VSVerticalSlider/Extensions/UIColor.swift; sourceTree = "<group>"; };
 		1281D7676FDAB17F23CAE34865D36430 /* Pods-VSVerticalSliderSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VSVerticalSliderSample-resources.sh"; sourceTree = "<group>"; };
-		15D5BE6E914D558D90D70D45D078E5F1 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = VSVerticalSlider/Extensions/UIColor.swift; sourceTree = "<group>"; };
-		1E5159D7F4E0B0FFD71817BFF59775DD /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = VSVerticalSlider/CALayer/GradientFill.swift; sourceTree = "<group>"; };
+		13E52503F1040A9382EE108D5BAA3ABF /* ReplicateFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplicateFill.swift; path = VSVerticalSlider/CALayer/ReplicateFill.swift; sourceTree = "<group>"; };
 		42FE44BB9A3CC5A9F7ECB6E2C088C223 /* Pods-VSVerticalSliderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VSVerticalSliderSample.release.xcconfig"; sourceTree = "<group>"; };
 		4C2CE0AA50F3E5B4DA9C3C877B44C604 /* Pods-VSVerticalSliderSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VSVerticalSliderSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66D1559409CB1BDF96961BEF550D7949 /* ArrowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrowView.swift; path = VSVerticalSlider/UIView/ArrowView.swift; sourceTree = "<group>"; };
+		6E479030D698F34BD4CF910147EAF9A3 /* VSVerticalSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VSVerticalSlider.modulemap; sourceTree = "<group>"; };
+		73F3419CDE790CB522C744C71D6B3128 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B95BA608849A36FE3FAD37E79DD0318 /* VSVerticalSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VSVerticalSlider.xcconfig; sourceTree = "<group>"; };
 		80924353B95D6070C3CE0D0E2403D258 /* Pods-VSVerticalSliderSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VSVerticalSliderSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		8DA736AC0072A9D155AD26AE09DC4888 /* VSVerticalSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VSVerticalSlider-dummy.m"; sourceTree = "<group>"; };
-		93A1CFCA71E6B9E8949399128EA36EF6 /* VSVerticalSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSVerticalSlider-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A5B8537288982C18034D0D5FB552617 /* VerticalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerticalSlider.swift; path = VSVerticalSlider/UIControl/VerticalSlider.swift; sourceTree = "<group>"; };
+		9AFE24F6A6DC450B88FDA6462DAA42F8 /* VSVerticalSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSVerticalSlider-umbrella.h"; sourceTree = "<group>"; };
 		9D3F4391E406C250CBBC0BA5C77732AE /* Pods-VSVerticalSliderSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VSVerticalSliderSample-umbrella.h"; sourceTree = "<group>"; };
-		A3E9A8311E62E18A2B2C269A5CEF0EBA /* VerticalSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerticalSlider.swift; path = VSVerticalSlider/UIControl/VerticalSlider.swift; sourceTree = "<group>"; };
-		AC3CABF48B9014D2F16190F4EF6FB2DF /* VSVerticalSliderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VSVerticalSliderDelegate.swift; path = VSVerticalSlider/Protocol/VSVerticalSliderDelegate.swift; sourceTree = "<group>"; };
-		B9008E9F477D86C285C0BB65631E7925 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D481ABDF8CF7E57F96A2F71DAECE9D /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = VSVerticalSlider/CALayer/GradientFill.swift; sourceTree = "<group>"; };
+		B58D42006FB4E6829DCC052B878C9B33 /* VSVerticalSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VSVerticalSlider-prefix.pch"; sourceTree = "<group>"; };
+		BCF46A1A930791CBBE04AB4356E069DE /* VSVerticalSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VSVerticalSlider-dummy.m"; sourceTree = "<group>"; };
 		BE899A71B2C194231C45274583A299EB /* VSVerticalSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VSVerticalSlider.framework; path = VSVerticalSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C006158B60842C6F893072B4AF9C7794 /* PoleImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PoleImageView.swift; path = VSVerticalSlider/UIControl/PoleImageView.swift; sourceTree = "<group>"; };
 		CBCF44EA914E6AB22F6DE19D55FBB310 /* Pods_VSVerticalSliderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VSVerticalSliderSample.framework; path = "Pods-VSVerticalSliderSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3F6E5E69C480A564F2D61A6AFDBA37 /* Pods-VSVerticalSliderSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VSVerticalSliderSample.modulemap"; sourceTree = "<group>"; };
-		D52FED1D52446BEA7E88C3684CC7C2FE /* VSVerticalSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSVerticalSlider.h; path = VSVerticalSlider/VSVerticalSlider.h; sourceTree = "<group>"; };
-		EBA0DCAF70B8BA44FBCC90739022542C /* VSVerticalSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VSVerticalSlider.modulemap; sourceTree = "<group>"; };
+		CF3C0D2F1490F66F20B1E08BD6E816DD /* VSVerticalSliderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VSVerticalSliderDelegate.swift; path = VSVerticalSlider/Protocol/VSVerticalSliderDelegate.swift; sourceTree = "<group>"; };
+		E891B1FC542A30123451FC3DB3DE64E2 /* VSVerticalSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSVerticalSlider.h; path = VSVerticalSlider/VSVerticalSlider.h; sourceTree = "<group>"; };
 		ED9288C247897B0FCEE0B554811FD1A7 /* Pods-VSVerticalSliderSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VSVerticalSliderSample-dummy.m"; sourceTree = "<group>"; };
-		FA2FDD9C2D01119C5B2DE087F25B718D /* VSVerticalSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VSVerticalSlider.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,21 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0388FF59A68676D947CF59A843478190 /* VSVerticalSlider */ = {
-			isa = PBXGroup;
-			children = (
-				1E5159D7F4E0B0FFD71817BFF59775DD /* GradientFill.swift */,
-				C006158B60842C6F893072B4AF9C7794 /* PoleImageView.swift */,
-				15D5BE6E914D558D90D70D45D078E5F1 /* UIColor.swift */,
-				A3E9A8311E62E18A2B2C269A5CEF0EBA /* VerticalSlider.swift */,
-				D52FED1D52446BEA7E88C3684CC7C2FE /* VSVerticalSlider.h */,
-				AC3CABF48B9014D2F16190F4EF6FB2DF /* VSVerticalSliderDelegate.swift */,
-				FCB44403A3457493EA8AC458ACAC4149 /* Support Files */,
-			);
-			name = VSVerticalSlider;
-			path = VSVerticalSlider;
-			sourceTree = "<group>";
-		};
 		36323AF92E317DD29C10689957146BB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +99,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6C2EE133C21F6BF6361EE46230AE198D /* Pods */ = {
+		5823AE79F43C4F12B87856E723514A9C /* VSVerticalSlider */ = {
 			isa = PBXGroup;
 			children = (
-				0388FF59A68676D947CF59A843478190 /* VSVerticalSlider */,
+				66D1559409CB1BDF96961BEF550D7949 /* ArrowView.swift */,
+				B2D481ABDF8CF7E57F96A2F71DAECE9D /* GradientFill.swift */,
+				13E52503F1040A9382EE108D5BAA3ABF /* ReplicateFill.swift */,
+				0C54EBC62CD11150AE7116D5998BA4A6 /* UIColor.swift */,
+				9A5B8537288982C18034D0D5FB552617 /* VerticalSlider.swift */,
+				E891B1FC542A30123451FC3DB3DE64E2 /* VSVerticalSlider.h */,
+				CF3C0D2F1490F66F20B1E08BD6E816DD /* VSVerticalSliderDelegate.swift */,
+				80BA1A27F8E7FD89FECCA6F7D14E3B11 /* Support Files */,
 			);
-			name = Pods;
+			name = VSVerticalSlider;
+			path = VSVerticalSlider;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -125,10 +120,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6C2EE133C21F6BF6361EE46230AE198D /* Pods */,
+				B896465B4B2468D8A7C58C294B408FD2 /* Pods */,
 				36323AF92E317DD29C10689957146BB6 /* Products */,
 				363B153062D37E3EDDD50D45C303FFCE /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		80BA1A27F8E7FD89FECCA6F7D14E3B11 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73F3419CDE790CB522C744C71D6B3128 /* Info.plist */,
+				6E479030D698F34BD4CF910147EAF9A3 /* VSVerticalSlider.modulemap */,
+				7B95BA608849A36FE3FAD37E79DD0318 /* VSVerticalSlider.xcconfig */,
+				BCF46A1A930791CBBE04AB4356E069DE /* VSVerticalSlider-dummy.m */,
+				B58D42006FB4E6829DCC052B878C9B33 /* VSVerticalSlider-prefix.pch */,
+				9AFE24F6A6DC450B88FDA6462DAA42F8 /* VSVerticalSlider-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VSVerticalSlider";
 			sourceTree = "<group>";
 		};
 		915EE30F6C6657EAFAA323038B733319 /* Pods-VSVerticalSliderSample */ = {
@@ -149,6 +158,14 @@
 			path = "Target Support Files/Pods-VSVerticalSliderSample";
 			sourceTree = "<group>";
 		};
+		B896465B4B2468D8A7C58C294B408FD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5823AE79F43C4F12B87856E723514A9C /* VSVerticalSlider */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,20 +180,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		FCB44403A3457493EA8AC458ACAC4149 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9008E9F477D86C285C0BB65631E7925 /* Info.plist */,
-				EBA0DCAF70B8BA44FBCC90739022542C /* VSVerticalSlider.modulemap */,
-				FA2FDD9C2D01119C5B2DE087F25B718D /* VSVerticalSlider.xcconfig */,
-				8DA736AC0072A9D155AD26AE09DC4888 /* VSVerticalSlider-dummy.m */,
-				93A1CFCA71E6B9E8949399128EA36EF6 /* VSVerticalSlider-prefix.pch */,
-				005C9ACF9BA1B1F34A0254D37E04EEC8 /* VSVerticalSlider-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VSVerticalSlider";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF3CABCE64811EF284C6B44680733EF3 /* Build configuration list for PBXNativeTarget "VSVerticalSlider" */;
 			buildPhases = (
-				FE39BAE68E8CC9DAFFE38E04361684ED /* Sources */,
+				B5551ED05A8FBDC42C7B32B29CA7FCFB /* Sources */,
 				E9FF1B9F3CAF0DC2B7DDABCA3BA88157 /* Frameworks */,
 				8409F5A16AA679242AA7CF5776AE8977 /* Headers */,
 			);
@@ -273,16 +276,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE39BAE68E8CC9DAFFE38E04361684ED /* Sources */ = {
+		B5551ED05A8FBDC42C7B32B29CA7FCFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA693A24C68467BE9A60A3FDE73C6E4 /* GradientFill.swift in Sources */,
-				BA36B3EBCB084E3A08D600F6E5FB4642 /* PoleImageView.swift in Sources */,
-				09E076E30CFA660BE87451630155AA4B /* UIColor.swift in Sources */,
-				90A0D01F3854385029F531CFE48C9DEB /* VerticalSlider.swift in Sources */,
-				EA13F8BBB6FDC29560E52529C80BAAA9 /* VSVerticalSlider-dummy.m in Sources */,
-				2B1C4202AE28519ACA20441069872EDD /* VSVerticalSliderDelegate.swift in Sources */,
+				E268F6A18784787680EACA527AFB6809 /* ArrowView.swift in Sources */,
+				3067E8F40F5943C306C9D0AEC9573E42 /* GradientFill.swift in Sources */,
+				A5A753BCF4943E0A3D53AAC2E491A0C7 /* ReplicateFill.swift in Sources */,
+				437E4E83FC751C8965CF3ED677D706A2 /* UIColor.swift in Sources */,
+				91945BAB502A66E09C37933A6F1B5C72 /* VerticalSlider.swift in Sources */,
+				76FB3E23A2687A3186880AA2C4AF1E92 /* VSVerticalSlider-dummy.m in Sources */,
+				7CA290A9561492C6FF1EDC5D01DC9F36 /* VSVerticalSliderDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +304,7 @@
 /* Begin XCBuildConfiguration section */
 		057B3CF4E414C368EE551BCEB24E7092 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2FDD9C2D01119C5B2DE087F25B718D /* VSVerticalSlider.xcconfig */;
+			baseConfigurationReference = 7B95BA608849A36FE3FAD37E79DD0318 /* VSVerticalSlider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -333,124 +337,7 @@
 			};
 			name = Release;
 		};
-		1A41B15D3AA834993ADDD808FA9D8764 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		525D084903C9A7B06BA1745B96C614EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42FE44BB9A3CC5A9F7ECB6E2C088C223 /* Pods-VSVerticalSliderSample.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Pods-VSVerticalSliderSample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_VSVerticalSliderSample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		980A3DB4D0F0F1BDF4468419F4CC5E71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2FDD9C2D01119C5B2DE087F25B718D /* VSVerticalSlider.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VSVerticalSlider/VSVerticalSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VSVerticalSlider/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VSVerticalSlider/VSVerticalSlider.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = VSVerticalSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A1E92291B71A9A4C440A7E085E2BCB25 /* Debug */ = {
+		8919EFB9ABE13E6A70D076F3BC931713 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 013F556B91648858B382FDDC93D94D32 /* Pods-VSVerticalSliderSample.debug.xcconfig */;
 			buildSettings = {
@@ -468,7 +355,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Pods-VSVerticalSliderSample.modulemap";
@@ -489,7 +376,42 @@
 			};
 			name = Debug;
 		};
-		BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */ = {
+		980A3DB4D0F0F1BDF4468419F4CC5E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B95BA608849A36FE3FAD37E79DD0318 /* VSVerticalSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VSVerticalSlider/VSVerticalSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VSVerticalSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VSVerticalSlider/VSVerticalSlider.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VSVerticalSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -529,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -538,14 +460,96 @@
 			};
 			name = Debug;
 		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC15E5C5231B8ACE292A5EECE11C6E5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42FE44BB9A3CC5A9F7ECB6E2C088C223 /* Pods-VSVerticalSliderSample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VSVerticalSliderSample/Pods-VSVerticalSliderSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VSVerticalSliderSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC80BBB5C066539FFFC0B2127CA5D3C4 /* Debug */,
-				1A41B15D3AA834993ADDD808FA9D8764 /* Release */,
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -553,8 +557,8 @@
 		528E165EB0C4140B5EF2AB038053CA94 /* Build configuration list for PBXNativeTarget "Pods-VSVerticalSliderSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1E92291B71A9A4C440A7E085E2BCB25 /* Debug */,
-				525D084903C9A7B06BA1745B96C614EB /* Release */,
+				8919EFB9ABE13E6A70D076F3BC931713 /* Debug */,
+				DC15E5C5231B8ACE292A5EECE11C6E5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
