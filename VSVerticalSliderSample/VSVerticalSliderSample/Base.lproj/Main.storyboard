@@ -22,18 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-o6-WrO">
-                                <rect key="frame" x="20" y="20" width="40" height="627"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-o6-WrO" customClass="VerticalSlider" customModule="VSVerticalSlider">
+                                <rect key="frame" x="20" y="40" width="40" height="527"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="PNn-Mw-P5V"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xc-9h-QyH">
-                                <rect key="frame" x="68" y="40" width="287" height="542"/>
+                                <rect key="frame" x="68" y="40" width="287" height="527"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-ho-7nP">
-                                        <rect key="frame" x="43" y="233.5" width="200" height="75"/>
+                                        <rect key="frame" x="43" y="226" width="200" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="RsH-Lv-cLG"/>
                                             <constraint firstAttribute="height" constant="75" id="UGu-xd-xB9"/>
@@ -53,12 +53,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2xc-9h-QyH" firstAttribute="leading" secondItem="hIn-o6-WrO" secondAttribute="trailing" constant="8" id="AGT-SB-900"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hIn-o6-WrO" secondAttribute="bottom" constant="20" id="If1-1p-9nF"/>
-                            <constraint firstItem="2xc-9h-QyH" firstAttribute="bottom" secondItem="hIn-o6-WrO" secondAttribute="bottom" constant="-65" id="RBd-35-twI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hIn-o6-WrO" secondAttribute="bottom" constant="100" id="If1-1p-9nF"/>
+                            <constraint firstItem="2xc-9h-QyH" firstAttribute="bottom" secondItem="hIn-o6-WrO" secondAttribute="bottom" id="RBd-35-twI"/>
                             <constraint firstAttribute="trailing" secondItem="2xc-9h-QyH" secondAttribute="trailing" constant="20" id="cHo-nY-4zl"/>
                             <constraint firstItem="hIn-o6-WrO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hhn-E7-ljX"/>
+                            <constraint firstItem="hIn-o6-WrO" firstAttribute="top" secondItem="2xc-9h-QyH" secondAttribute="top" id="iuo-s7-IFt"/>
                             <constraint firstItem="2xc-9h-QyH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="um2-Ym-ijf"/>
-                            <constraint firstItem="hIn-o6-WrO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="yZd-60-25S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

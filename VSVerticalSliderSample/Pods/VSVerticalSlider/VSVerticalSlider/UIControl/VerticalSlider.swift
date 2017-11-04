@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class VerticalSlider: UIControl {
+@IBDesignable public class VerticalSlider: UIControl {
     
     public weak var delegate: VSVerticalSliderDelegate?
     private let gradientFill = GradientFill()
@@ -32,7 +32,14 @@ public class VerticalSlider: UIControl {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        self.primaryColor = backgroundColor!
+        print(frame.height)
+        frameHeight  = frame.height - 140
+        originOffsetX = 0
+        originOffsetY = 0
+        setup()
+        setupArrowView()
     }
     
     public convenience init(height: CGFloat, primaryColor: UIColor, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {

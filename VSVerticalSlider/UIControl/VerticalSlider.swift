@@ -32,7 +32,13 @@ public class VerticalSlider: UIControl {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        primaryColor = backgroundColor ?? UIColor.white
+        frameHeight  = frame.height - 140
+        originOffsetX = 0
+        originOffsetY = 0
+        setup()
+        setupArrowView()
     }
     
     public convenience init(height: CGFloat, primaryColor: UIColor, offsetX: CGFloat = 20, offsetY: CGFloat = 20) {
@@ -45,7 +51,7 @@ public class VerticalSlider: UIControl {
         setup()
         setupArrowView()
     }
-    
+
     private func setSliderContants() {
         minScrollPoint = frameWidth + placeholderHeight
         maxScrollPoint = frameHeight
@@ -93,7 +99,6 @@ public class VerticalSlider: UIControl {
             currentVal = Int(abs((gradientFill.currentPoint / scrollUnit - sliderOffset) - 100))
             animatePoles(forValue: currentVal)
             delegate?.valueDidChange(value: currentVal)
-            print("current value: \(currentVal)")
         }
     }
     
