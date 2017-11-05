@@ -12,12 +12,10 @@ import VSVerticalSlider
 class ViewController: UIViewController {
 
     @IBOutlet weak var percentageLabel: UILabel!
-    
     @IBOutlet weak var verticalSlider: VerticalSlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //verticalSlider.delegate = self
         percentageLabel.text = "50 %"
         setupSlider()
     }
