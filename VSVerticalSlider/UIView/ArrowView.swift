@@ -6,31 +6,6 @@
 //  Copyright © 2017 Vincent Smithers. All rights reserved.
 //
 
-// readme
-    // description / about
-        // animation gif
-        
-    // quickstart
-        // with playground
-        // sample project
-
-    // Add to Project
-        // setup with pods
-        // setup with carthage
-        // setup with storyboard
-        // images
-        // setup programatically
-        // conforming to protocol
-        // delegate methods / set slider value
-            // gif
-
-    // todo check list
-        // Slider Panel: custom stackview with multiple slider
-        // unit tests
-        // Image Assets
-
-    // SUBMIT TO BOHEMOTH RESOURCE REPO
-
 import UIKit
 
 public enum ArrowDirection {

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //verticalSlider.delegate = self
+        percentageLabel.text = "50 %"
         setupSlider()
     }
     
