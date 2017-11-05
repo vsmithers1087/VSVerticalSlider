@@ -77,5 +77,8 @@ slider.setValue(newValue)
 - **Swift 4.0** +
 - **iOS 10.0** +
 
+## Contributing
+All feedback and suggestions are welcome. If you see an issue, would like to make a change, or add a feature please make a pull request.
+
 ## License
 `VSVerticalSlider`is released under the [MIT License](LICENSE).
