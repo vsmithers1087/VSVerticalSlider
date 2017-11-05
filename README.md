@@ -1,4 +1,4 @@
-# VSVerticalSlider
+# VSVerticalSlider△▽
 An animatable and customizable vertical slider written in Swift4.
 
 <img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
@@ -21,7 +21,7 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 
 ## Installation
 ### CocoaPods
-'VSVerticalSlider' can be installed with [CocoaPods]() by adding this to your `Podfile`:
+`VSVerticalSlider` can be installed with [CocoaPods]() by adding this to your `Podfile`:
 ```Ruby
 platform :ios, ’10.0’
 
@@ -34,8 +34,8 @@ end
 ```
 
 ## Setup
-1. Create `VSVerticalSlider` with height, color, and optional x, y offsets
-2. Set `VSVerticalSlider` delegate to self
+1. Create `VSVerticalSlider` with height, color, and optional `x, y` offsets
+2. Set the slider's delegate to self
 3. Add to your UIView
 ```swift
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ end
     }
 ```
 ### Conforming to VSVerticalSliderDelegate
-Receive a callback everytime the slider value changes.
+Receive a callback everytime the slider value changes
 ```swift
 extension ViewController: VSVerticalSliderDelegate {
     func valueDidChange(value: Int) {
@@ -67,7 +67,6 @@ slider.setValue(newValue)
 ```
 
 ## Todo
-
 - [x] Add Readme
 - [ ] Setup With Storyboards
 - [ ] Carthage Support
