@@ -1,13 +1,16 @@
 # VSVerticalSlider
 An animatable and customizable vertical slider written in Swift4.
 
+<img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
+
 ## Quick Start
 
-## Playground
+## VSVerticalSliderPlayground
 1. Clone Repo
 2. Open VSVerticalSlider.xcworkspace
 3. In the file navigator open VSVerticalSliderPlayground
 4. Build with iPhone 8 set as device
+5. Open assistent editor and set to Live View
 
 For more information on interactive playgrounds [read this]() blog post by Apple Developer
 
@@ -18,18 +21,50 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 
 ## Installation
 ### CocoaPods
-'VSVerticalSlider' can be install with [CocoaPods]() by adding to `Podfile`:
+'VSVerticalSlider' can be installed with [CocoaPods]() by adding this to your `Podfile`:
 ```Ruby
+platform :ios, ’10.0’
+
+target 'VSVerticalSliderSample' do
+
+  use_frameworks!
+  pod 'VSVerticalSlider', :git => 'https://github.com/vsmithers1087/VSVerticalSlider.git'
+
+end
 ```
 
 ## Setup
+1. Create `VSVerticalSlider` with height, color, and optional x, y offsets
+2. Set `VSVerticalSlider` delegate to self
+3. Add to your UIView
 ```swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSlider()
+    }
+    
+    private func setupSlider() {
+        let slider = VerticalSlider(height: 500.0 - 13, primaryColor: UIColor.red, offsetX: 20, offsetY: 40.0)
+        slider.delegate = self
+        view.addSubview(slider)
+    }
 ```
 ### Conforming to VSVerticalSliderDelegate
+Receive a callback everytime the slider value changes.
 ```swift
+extension ViewController: VSVerticalSliderDelegate {
+    func valueDidChange(value: Int) {
+        percentageLabel.text = "\(value) %"
+    }
+}
 ```
 
 ### Setting Slider Value
+```swift
+//A value between 0 and 100
+let newValue = 51
+slider.setValue(newValue)
+```
 
 ## Todo
 
@@ -38,4 +73,10 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 - [ ] Carthage Support
 - [ ] Unit Tests
 
-## Contributing
+## Prerequisites
+- **Xcode 9.0** +
+- **Swift 4.0** +
+- **iOS 10.0** +
+
+## License
+`VSVerticalSlider`is released under the [MIT License](LICENSE).
