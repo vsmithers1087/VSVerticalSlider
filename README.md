@@ -1,4 +1,7 @@
-# VSVerticalSlider△▽
+# VSVerticalSlider
+
+<img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/sliders.png" height="350" width="700">
+
 An animatable and customizable vertical slider written in Swift4.
 
 <img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
@@ -58,7 +61,6 @@ extension ViewController: VSVerticalSliderDelegate {
     }
 }
 ```
-
 ### Setting Slider Value
 ```swift
 //A value between 0 and 100
