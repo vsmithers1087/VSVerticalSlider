@@ -1,17 +1,17 @@
-# VSVerticalSlider
+# VerticalSlider
 
-<img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/sliders.png" height="350" width="700">
+<img src="https://github.com/vsmithers1087/VerticalSlider/blob/master/ReadmeImages/sliders.png" height="350" width="700">
 
 An animatable and customizable vertical slider written in Swift4.
 
-<img src="https://github.com/vsmithers1087/VSVerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
+<img src="https://github.com/vsmithers1087/VerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
 
 ## Quick Start
 
-## VSVerticalSliderPlayground
+## VerticalSliderPlayground
 1. Clone Repo
-2. Open VSVerticalSlider.xcworkspace
-3. In the file navigator open VSVerticalSliderPlayground
+2. Open VerticalSlider.xcworkspace
+3. In the file navigator open VerticalSliderPlayground
 4. Build with iPhone 8 set as device
 5. Open assistent editor and set to Live View
 
@@ -19,25 +19,25 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 
 ## Sample Project
 1. Clone Repo
-2. Open VSVerticalSliderSample.xcworkspace 
+2. Open VerticalSliderSample.xcworkspace 
 3. Build and run.
 
 ## Installation
 ### CocoaPods
-`VSVerticalSlider` can be installed with [CocoaPods]() by adding this to your `Podfile`:
+`VerticalSlider` can be installed with [CocoaPods]() by adding this to your `Podfile`:
 ```Ruby
 platform :ios, ’10.0’
 
-target 'VSVerticalSliderSample' do
+target 'VerticalSliderSample' do
 
   use_frameworks!
-  pod 'VSVerticalSlider', :git => 'https://github.com/vsmithers1087/VSVerticalSlider.git'
+  pod 'VerticalSlider', :git => 'https://github.com/vsmithers1087/VerticalSlider.git'
 
 end
 ```
 
 ## Setup
-1. Create `VSVerticalSlider` with height, color, and optional `x, y` offsets
+1. Create `VerticalSlider` with height, color, and optional `x, y` offsets
 2. Set the slider's delegate to self
 3. Add to your UIView
 ```swift
@@ -52,10 +52,10 @@ end
         view.addSubview(slider)
     }
 ```
-### Conforming to VSVerticalSliderDelegate
+### Conforming to VerticalSliderDelegate
 Receive a callback everytime the slider value changes
 ```swift
-extension ViewController: VSVerticalSliderDelegate {
+extension ViewController: VerticalSliderDelegate {
     func valueDidChange(value: Int) {
         percentageLabel.text = "\(value) %"
     }
@@ -83,4 +83,4 @@ slider.setValue(newValue)
 All feedback and suggestions are welcome. If you see an issue, would like to make a change, or add a feature please make a pull request.
 
 ## License
-`VSVerticalSlider`is released under the [MIT License](LICENSE).
+`VerticalSlider`is released under the [MIT License](LICENSE).
