@@ -2,7 +2,7 @@
 
 <img src="https://github.com/vsmithers1087/VerticalSlider/blob/master/ReadmeImages/sliders.png" height="350" width="700">
 
-An animatable and customizable vertical slider written in Swift4.
+An animatable and customizable vertical slider written in Swift 4.
 
 <img src="https://github.com/vsmithers1087/VerticalSlider/blob/master/ReadmeImages/demo.gif" height="350" width="200">
 
@@ -10,7 +10,7 @@ An animatable and customizable vertical slider written in Swift4.
 
 ## VerticalSliderPlayground
 1. Clone Repo
-2. Open VerticalSlider.xcworkspace
+2. Open VSVerticalSlider.xcworkspace
 3. In the file navigator open VerticalSliderPlayground
 4. Build with iPhone 8 set as device
 5. Open assistent editor and set to Live View
@@ -19,7 +19,7 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 
 ## Sample Project
 1. Clone Repo
-2. Open VerticalSliderSample.xcworkspace 
+2. Open VSVerticalSliderSample.xcworkspace 
 3. Build and run.
 
 ## Installation
@@ -37,7 +37,7 @@ end
 ```
 
 ## Setup
-1. Create `VerticalSlider` with height, color, and optional `x, y` offsets
+1. Create `VSVerticalSlider` with height, color, and optional `x, y` offsets
 2. Set the slider's delegate to self
 3. Add to your UIView
 ```swift
@@ -47,7 +47,7 @@ end
     }
     
     private func setupSlider() {
-        let slider = VerticalSlider(height: 500.0 - 13, primaryColor: UIColor.red, offsetX: 20, offsetY: 40.0)
+        let slider = VSVerticalSlider(height: 500.0 - 13, primaryColor: UIColor.red, offsetX: 20, offsetY: 40.0)
         slider.delegate = self
         view.addSubview(slider)
     }
@@ -55,7 +55,7 @@ end
 ### Conforming to VerticalSliderDelegate
 Receive a callback everytime the slider value changes
 ```swift
-extension ViewController: VerticalSliderDelegate {
+extension ViewController: VSVerticalSliderDelegate {
     func valueDidChange(value: Int) {
         percentageLabel.text = "\(value) %"
     }
