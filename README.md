@@ -31,7 +31,7 @@ platform :ios, ’10.0’
 target 'VerticalSliderSample' do
 
   use_frameworks!
-  pod 'VerticalSlider', :git => 'https://github.com/vsmithers1087/VerticalSlider.git'
+  pod 'VSVerticalSlider', :git => 'https://github.com/vsmithers1087/VerticalSlider.git'
 
 end
 ```
