@@ -11,7 +11,7 @@ An animatable and customizable vertical slider written in Swift 4.
 ## VerticalSliderPlayground
 1. Clone Repo
 2. Open VSVerticalSlider.xcworkspace
-3. In the file navigator open VerticalSliderPlayground
+3. In the file navigator open VSVerticalSliderPlayground
 4. Build with iPhone 8 set as device
 5. Open assistent editor and set to Live View
 
@@ -24,7 +24,7 @@ For more information on interactive playgrounds [read this]() blog post by Apple
 
 ## Installation
 ### CocoaPods
-`VerticalSlider` can be installed with [CocoaPods]() by adding this to your `Podfile`:
+`VSVerticalSlider` can be installed with [CocoaPods]() by adding this to your `Podfile`:
 ```Ruby
 platform :ios, ’10.0’
 
